@@ -1,0 +1,169 @@
+* {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-family: "Symbols Nerd Font Mono";
+  font-size: 14px;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding-bottom: 0;
+}
+
+#waybar {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#workspaces {
+  background: #030406;
+  margin: 0;
+  padding: 0 2px;
+  border-radius: 6px;
+}
+
+#workspaces button {
+  color: white;
+  padding: 0px;
+  margin: 4px 3px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#workspaces button.active {
+  color: black;
+  background: #f7f488;
+  border-radius: 6px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1.0;
+}
+
+#workspaces button:hover {
+  background: grey;
+  border-radius: 6px;
+  opacity: 0.4;
+}
+
+
+
+#clock,
+#battery,
+#memory,
+#backlight,
+#tray,
+#window,
+#custom-launcher,
+#custom-power,
+#custom-updates,
+#custom-swww,
+#custom-swww-grey,
+#custom-rofi,
+#network {
+  padding: 0 4px;
+  background: #030406;
+  margin: 0px 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 0px;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -----------------------------------------------------------------------------
+*/
+
+
+#clock {
+  color: #abf9c2;
+
+}
+
+#battery {
+  background: lightcoral;
+  color: #030406;
+
+}
+
+#battery.charging {
+  background: #41ce6c;
+  color: #030406;
+}
+
+@keyframes blink {
+  to {
+    color: #4c566a;
+    background-color: #eceff4;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: lightcoral;
+  color: #f4ecf0;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+#battery.critical:not(.charging) {
+  background: #fd5959;
+  color: #f4ecf0;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+#tray {}
+
+
+
+#custom-launcher {
+  border: hidden;
+  background-color: #41ce6c;
+  background-image: url("/home/nyx/.config/waybar/ghost.png");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2px 10px;
+}
+
+
+#custom-power {
+  border-style: hidden;
+  background-color: #030406;
+  padding: 2px 10px;
+  color: burlywood;
+}
+
+#window {
+  border-style: hidden;
+  margin-top: 1px;
+}
+
+#memory {
+  color: pink;
+
+}
+
+#backlight {
+  color: lightsalmon;
+
+}
+
+#network {}
+
+#custom-rofi {
+  background: #6ab2ff;
+  color: #03050F;
+  padding: 0px 10px;
+}

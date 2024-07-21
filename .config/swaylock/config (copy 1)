@@ -1,0 +1,60 @@
+#███████╗██╗    ██╗ █████╗ ██╗   ██╗██╗      ██████╗  ██████╗██╗  ██╗
+#██╔════╝██║    ██║██╔══██╗╚██╗ ██╔╝██║     ██╔═══██╗██╔════╝██║ ██╔╝
+#███████╗██║ █╗ ██║███████║ ╚████╔╝ ██║     ██║   ██║██║     █████╔╝ 
+#╚════██║██║███╗██║██╔══██║  ╚██╔╝  ██║     ██║   ██║██║     ██╔═██╗ 
+#███████║╚███╔███╔╝██║  ██║   ██║   ███████╗╚██████╔╝╚██████╗██║  ██╗
+#╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝
+
+
+# General
+daemonize
+show-failed-attempts
+ignore-empty-password
+
+# Clock 
+clock
+datestr=%a, %B %e
+timestr=%I:%M %p
+
+# Image 
+image=/home/nyx/Pictures/Wallpapers//Berserk.jpg
+
+# Effects
+fade-in=2
+effect-blur=5x5
+effect-vignette=1:1
+
+# Indicator
+indicator
+indicator-radius=200
+indicator-thickness=20
+
+# All colors
+
+# General
+line-color=1f1d2e
+ring-color=000000 
+inside-color=010203
+key-hl-color=eb6f92
+separator-color=00000000
+text-color=e0def4
+
+# Verification
+line-ver-color=010203
+ring-ver-color=010203 
+inside-ver-color=010203 
+text-ver-color=010203
+
+# Clear 
+inside-clear-color=010203 
+text-clear-color=010203
+ring-clear-color=010203 
+line-clear-color=010203
+
+# Wrong 
+line-wrong-color=1f1d2e
+ring-wrong-color=010203 
+text-wrong-color=ffffff
+inside-wrong-color=010203
+
+

@@ -1,0 +1,144 @@
+
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 30,
+    "width":1900,
+    "margin": "5 0 0 0",
+    "spacing":0,
+
+    "modules-left": ["custom/launcher","hyprland/window","memory","custom/rofi","custom/updates"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/swww-grey","custom/swww","network","battery","clock","tray","custom/power"],
+
+
+
+"hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "focused": "",
+        "default": ""
+    },
+    "on-scroll-up": "customctl dispatch workspace e+1",
+    "on-scroll-down": "customctl dispatch workspace e-1"
+},
+
+    "hyprland/window": {
+        "format": "{}",
+      	"icon":true,
+	      "icon-size" : 18,  
+        "rewrite": {"": "Hyprland"},
+        "seperate-outputs":true,
+    },
+
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }, 
+
+  
+    "clock": {
+      "format": "<span foreground='#abf9c2'>  </span>{:%a %d   %H:%M}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "on-click":"foot -e tty-clock -c -C 2 -B"
+   },
+
+
+    "memory": {
+        "format": "🖴 {: >3}%",
+        "on-click": "kitty -e btop --utf-force"
+    },
+
+
+    "backlight": {
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%",
+        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+    },
+
+
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 20,
+            "critical": 5
+        },
+        "format": "{icon} {capacity: >3}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "custom/updates": {
+       "format": "{} {icon}",
+       "return-type": "json",
+       "format-icons": {
+           "has-updates": "󱍷",
+           "updated": "󰂪",
+        "interval": 7200,
+       },
+       "exec-if": "which waybar-module-pacman-updates",
+       "exec": "waybar-module-pacman-updates",
+       "on-click": "alacritty -e update"
+   },
+
+
+    "custom/power": {
+      	"format":"⏻",
+       	"on-click": "eww open powermenu",
+      	"tooltip": false,
+   },
+
+
+    "custom/launcher": {
+      "format":"    ",
+    	"on-click": "eww open launch",
+    	"tooltip": false,
+     },
+
+
+     "custom/swww":{
+        "format":"🌕",
+        "on-click":"exec $HOME/Scripts/swww.sh",
+        "tooltip":false,
+      },
+    
+    "custom/swww-grey":{
+        "format":"🌓",
+        "on-click":"exec $HOME/Scripts/swww-grey.sh",
+        "tooltip":false,
+      },
+
+    "network": {
+        "format-wifi": "{essid}    ",
+        "format-ethernet": "{ipaddr}/{cidr}    ",
+        "tooltip-format": "{ifname} via {gwaddr}    ",
+        "format-linked": "{ifname} (No IP)    ",
+        "format-disconnected": "Disconnected    ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+
+    "custom/rofi":{
+      "format":"menu",
+      "on-click": "exec ~/Scripts/menu.sh",
+    	"tooltip": false,
+      }
+
+
+}

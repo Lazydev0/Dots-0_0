@@ -1,0 +1,206 @@
+package main
+
+import (
+	"context"
+	"flag"
+	"fmt"
+	"log"
+	"os"
+	"strings"
+	"sync"
+
+	"github.com/google/generative-ai-go/genai"
+	"github.com/micr0-dev/lexido/pkg/commands"
+	"github.com/micr0-dev/lexido/pkg/io"
+	"github.com/micr0-dev/lexido/pkg/prompt"
+	"github.com/micr0-dev/lexido/pkg/tea"
+	"google.golang.org/api/iterator"
+	"google.golang.org/api/option"
+
+	tearaw "github.com/charmbracelet/bubbletea"
+)
+
+var p *tearaw.Program
+
+func main() {
+	helpPtr := flag.Bool("help", false, "Display help information")
+	hPtr := flag.Bool("h", false, "Display help information")
+	cPtr := flag.Bool("c", false, "Continue previous conversation")
+
+	flag.Parse()
+
+	if *helpPtr || *hPtr {
+		io.DisplayHelp()
+		os.Exit(0)
+	}
+
+	ctx := context.Background()
+
+	// Configure API key
+	apiKey := "AIzaSyAFZMct0j_jy2Cw-HTfkRMsxT2swwX_EMM"
+
+	// Use API key
+	fmt.Printf("Using API key: %s\n", apiKey)
+
+	// Set up the GenAI client
+	client, err := genai.NewClient(ctx, option.WithAPIKey(apiKey))
+	if err != nil {
+		log.Fatalf("Failed to create client: %v", err)
+	}
+	defer client.Close()
+
+	// Read piped input if present
+	pipedInput, err := io.ReadPipedInput()
+	if err != nil {
+		log.Fatalf("Failed to read piped input: %v", err)
+	}
+
+	var text_prompt string
+
+	if *cPtr {
+		// Read previous conversation from cache if -c is present
+		cachedConversation, err := io.ReadConversationCache()
+		if err != nil {
+			log.Printf("Warning: Could not read cache. Starting a new conversation. Error: %v", err)
+		}
+		text_prompt = cachedConversation + "\n"
+	}
+
+	text_prompt += strings.Join(os.Args[1:], " ")
+
+	if text_prompt == "" {
+		text_prompt = "The user did not provide a prompt."
+	}
+
+	// Append piped input to the prompt if available
+	if pipedInput != "" {
+		text_prompt += "\n\nUser also attached via pipe the following input:\n" + pipedInput
+	}
+
+	// Get some information about the user's system
+	// Get the user's username
+	userpath, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatal(err)
+	}
+	username := userpath[strings.LastIndex(userpath, "/")+1:]
+
+	// Get the user's hostname
+	hostname, err := os.Hostname()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Get the user's current working directory
+	cwd, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Detect Operating System (MacOS or Linux)
+	osname, err := io.RunCmd("uname", "-s")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var opperatingSystem string
+
+	if strings.Contains(strings.ToLower(osname), "darwin") {
+		opperatingSystem = "macOS"
+	} else {
+		// Get the user's full operating system if not MacOS
+		opperatingSystem, err = io.ExtractHostnameCtlValue("Operating System")
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+
+	pre_prompt := prompt.DefaultPrePrompt
+
+	// Set the default post-prompt
+	pre_prompt += " The user, " + username + ", is currently running " + opperatingSystem + " on " + hostname + " in " + cwd + "."
+
+	// Call Gemini Pro with the user's prompt
+	model := client.GenerativeModel("gemini-pro")
+	prompt := genai.Text(pre_prompt + "\n User: " + text_prompt)
+
+	model.SetTemperature(0.7)
+	model.SetTopK(1)
+
+	model.SafetySettings = []*genai.SafetySetting{
+		{
+			Category:  genai.HarmCategoryHarassment,
+			Threshold: genai.HarmBlockNone,
+		},
+		{
+			Category:  genai.HarmCategoryHateSpeech,
+			Threshold: genai.HarmBlockNone,
+		},
+		{
+			Category:  genai.HarmCategorySexuallyExplicit,
+			Threshold: genai.HarmBlockNone,
+		},
+		{
+			Category:  genai.HarmCategoryDangerousContent,
+			Threshold: genai.HarmBlockNone,
+		},
+	}
+
+	// Run the Bubble Tea program
+
+	wg := &sync.WaitGroup{}
+
+	cmds := new([]string)
+
+	p = tearaw.NewProgram(tea.InitialModel(cmds))
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		if _, err := p.Run(); err != nil {
+			log.Printf("Alas, there's been an error: %v", err)
+			os.Exit(1)
+		}
+	}()
+
+	iter := model.GenerateContentStream(ctx, prompt)
+
+	var responseContent string
+	totalresponse := 1
+
+	for {
+		resp, err := iter.Next()
+		if err != nil {
+			if err == iterator.Done {
+				break // End of stream
+			}
+			log.Println("An error occurred:", err)
+
+			// Check if the error is due to safety filter activation
+			if strings.Contains(err.Error(), "FinishReasonSafety") {
+				fmt.Println("The content generation was blocked for safety reasons. Please try a different prompt.")
+				fmt.Println(resp.PromptFeedback.BlockReason.String())
+				return // Exit the loop and potentially allow for a new attempt
+			}
+
+			log.Fatal(err) // For any other type of error, terminate
+		}
+
+		for _, part := range resp.Candidates[0].Content.Parts {
+			totalresponse += len(fmt.Sprintf("%v", part))
+			p.Send(tea.AppendResponseMsg(fmt.Sprintf("%v", part)))
+
+			responseContent += fmt.Sprintf("%v", part)
+		}
+	}
+
+	p.Send(tea.GenerationDoneMsg{})
+
+	if err := io.CacheConversation(text_prompt + "\n" + responseContent); err != nil {
+		log.Printf("Warning: Failed to cache conversation. Error: %v", err)
+	}
+
+	wg.Wait()
+
+	// Run the commands
+	commands.RunCommands(*cmds)
+}
