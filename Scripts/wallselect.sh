@@ -8,8 +8,8 @@ for app in imagemagick; do
 done
 
 # Set some variables
-WALL_DIR="${HOME}/Pictures/Gray/"
-CACHE_DIR="${HOME}/.cache/rofi_greyicons/"
+WALL_DIR="${HOME}/Pictures/Colourful/"
+CACHE_DIR="${HOME}/.cache/rofi_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi//wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
