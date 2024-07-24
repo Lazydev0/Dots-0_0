@@ -2,7 +2,7 @@
 
 # Define the directories for colorful and black-and-white wallpapers
 COLOR_DIR="$HOME/Pictures/Colourful/"
-BW_DIR="$HOME/Pictures/Black-n-White/"
+BW_DIR="$HOME/Pictures/Gray/"
 # Define the path to the file storing the last wallpaper name
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 

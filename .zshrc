@@ -173,11 +173,14 @@ function crun() {
         return 1
     fi
     cpp_file="$1"
-    executable=$(basename -s .cpp "$cpp_file")
-    g++ -o Executables/"$executable" "$cpp_file"
-    if [[ $? -eq 0 ]]; then
-        ./Executables/"$executable"
+    executable="$HOME/Documents/Programming/Cpp/Executables/$(basename -s .cpp "$cpp_file")"
+    if [[ -f $executable && $cpp_file -nt $executable ]]; then
+        g++ -std=c++20 -o "$executable" "$cpp_file"
+    fi
+    if [[ -f $executable ]]; then
+        $executable
     else
         echo "Compilation failed"
     fi
 }
+

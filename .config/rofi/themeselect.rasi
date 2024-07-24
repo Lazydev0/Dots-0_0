@@ -43,10 +43,10 @@ mainbox {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     6;
+    columns:                     2;
     lines:                       1;
-    spacing:                     50px;
-    padding:                     20px 150px;
+    spacing:                     100px;
+    padding:                     20px 350px;
     cycle:                       true;
     dynamic:                     false;
     scrollbar:                   false;
@@ -71,7 +71,7 @@ element {
     text-color:                  @foreground;
 }
 
-@media(max-aspect-ratio: 1.8) {
+@media(max-aspect-ratio:1) {
     element {
         orientation:             vertical;
     }
@@ -93,7 +93,7 @@ element-icon {
 element-text {
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    padding:                     20px;
+    padding:                     0px 0px 0px 0px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
