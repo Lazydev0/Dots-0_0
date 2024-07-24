@@ -1,13 +1,15 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Cargo
+# Enva
 export PATH="$HOME/.cargo/bin:$PATH"
 export GTK_THEME="LAVA-Cyan"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
+export PATH=$PATH:/home/nyx/.spicetify
+export FZF_DEFAULT_OPTS="--color=16 --layout=reverse --border=sharp --prompt='FZF> '"
 
 # No errors
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -20,9 +22,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
-
-# Fzf 
-export FZF_DEFAULT_OPTS="--color=16 --layout=reverse --border=sharp --prompt='FZF> '"
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
@@ -100,13 +99,13 @@ alias bonsai='cbonsai'
 alias help='tldr'
 alias btop='btop --utf-force'
 alias ping='ping -c 5'
-alias flogo='fish_logo'
-alias open='mimeopen'
+alias deploy='mimeopen'
 alias clock='tty-clock'
 alias fetch='fm6000 -r -c yellow -n -g 12 -l 16'
 alias pipes='pipes-rs'
 alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
+alias ll='npx live-server'
 
 # Custom Functions
 
@@ -166,22 +165,31 @@ function jrun() {
 }
 
 
+
 function crun() {
     if [[ -z $1 ]]; then
         echo "Usage: crun <filename.cpp>"
         return 1
     fi
+
     cpp_file="$1"
     executable="$HOME/Documents/Programming/Cpp/Executables/$(basename -s .cpp "$cpp_file")"
-    if [[ -f $executable && $cpp_file -nt $executable ]]; then
+
+    if [[ ! -f $executable || $cpp_file -nt $executable ]]; then
         g++ -std=c++20 -o "$executable" "$cpp_file"
+        if [[ $? -ne 0 ]]; then
+            echo "Compilation failed"
+            return 1
+        fi
     fi
+
     if [[ -f $executable ]]; then
-        $executable
+        "$executable"
     else
-        echo "Compilation failed"
+        echo "Executable not found"
+        return 1
     fi
 }
 
 
-export PATH=$PATH:/home/nyx/.spicetify
+

@@ -21,4 +21,4 @@ next_number=$((last_number + 1))
 echo "$next_number" >"$last_number_file"
 
 # Take the screenshot
-grimblast save area "$screenshot_dir/Area_$next_number.png"
+grimblast save area "$screenshot_dir/Area_$next_number.png" && dunstify Selected\ area captured -i $HOME/.local/share/icons/Custom/Area_captured.png
