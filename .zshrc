@@ -86,7 +86,6 @@ alias grep='ugrep --color=auto'
 alias ip='ip -color'
 alias cat='bat'
 alias ls='eza -al --color=always --group-directories-first --icons'
-alias lex='~/Assets/lexido/lexido'
 alias anime='~/Assets/ani-cli/ani-cli'
 alias tree='~/Assets/tree/gt'
 alias convert='~/Scripts/img_converter.sh'
@@ -184,3 +183,5 @@ function crun() {
     fi
 }
 
+
+export PATH=$PATH:/home/nyx/.spicetify
