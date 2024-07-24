@@ -6,6 +6,9 @@
 ![Logo](https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Wallpaper_lib/splash.gif?raw=true) 
 
 
+
+
+
 # Dots-0_0
 
 
