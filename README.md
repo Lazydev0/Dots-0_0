@@ -8,10 +8,9 @@
 
 
 <div align="center">
- <img src="https://static.vecteezy.com/system/resources/previews/005/139/852/non_2x/bowl-with-rice-and-chopsticks-flat-illustration-icon-on-white-background-for-web-landing-page-sticker-banner-free-vector.jpg" alt="Logo" height="100" width ="100">
+ <img src="https://static.vecteezy.com/system/resources/previews/005/139/852/non_2x/bowl-with-rice-and-chopsticks-flat-illustration-icon-on-white-background-for-web-landing-page-sticker-banner-free-vector.jpg" alt="Logo" height="200" width ="200">
 </div>
 
-https://static.vecteezy.com/system/resources/previews/005/139/852/non_2x/bowl-with-rice-and-chopsticks-flat-illustration-icon-on-white-background-for-web-landing-page-sticker-banner-free-vector.jpg
 
 # Dots-0_0
 
