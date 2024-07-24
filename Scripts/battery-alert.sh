@@ -12,7 +12,7 @@ WARNING_LEVEL=20
 CRITICAL_LEVEL=5
 
 # Icon paths
-ICON_PATH="$HOME/.local/share/icons/Custom/scalable/apps"
+ICON_PATH="$HOME/.local/share/icons/Custom/"
 ICON_FULL="$ICON_PATH/Battery_full.png"
 ICON_MEDIUM="$ICON_PATH/Battery_low.png"
 ICON_CRITICAL="$ICON_PATH/Battery_critical.png"
