@@ -12,10 +12,10 @@ CACHE_DIR="${HOME}/.cache/theme_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/themeselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
-MOITOR_RES=$(hyprctl monitors | grep -m1 "res: " | awk '{print $4}' | cut -d 'x' -f1)
+MONITOR_RES=$(hyprctl monitors | grep -m1 "res: " | awk '{print $4}' | cut -d 'x' -f1)
 MONITOR_SCALE=$(hyprctl monitors | grep -m1 "scale: " | awk '{print $2}')
-MOITOR_RES=$((MOITOR_RES * 17 / MONITOR_SCALE))
-ROFI_OVERRIDE="element-icon{size:${MOITOR_RES}px;border-radius:0px;}"
+MONITOR_RES=$((MONITOR_RES * 17 / MONITOR_SCALE))
+ROFI_OVERRIDE="element-icon{size:${MONITOR_RES}px;border-radius:0px;}"
 
 # Create cache dir if not exists
 if [ ! -d "${CACHE_DIR}" ]; then

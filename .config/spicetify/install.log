@@ -1,0 +1,8 @@
+[17:52:12 2024-07-24] FETCHING Version 2.36.15
+[17:52:12 2024-07-24] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.36.15/spicetify-2.36.15-linux-amd64.tar.gz
+[17:52:18 2024-07-24] EXTRACTING /home/nyx/.spicetify/spicetify.tar.gz
+[17:52:18 2024-07-24] SETTING EXECUTABLE PERMISSIONS TO /home/nyx/.spicetify/spicetify
+[17:52:18 2024-07-24] REMOVING /home/nyx/.spicetify/spicetify.tar.gz
+[17:52:18 2024-07-24] spicetify path already set in /home/nyx/.zshrc, continuing...
+[17:52:18 2024-07-24] spicetify v2.36.15 was installed successfully to /home/nyx/.spicetify
+[17:52:18 2024-07-24] Run 'spicetify --help' to get started
