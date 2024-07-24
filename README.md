@@ -3,7 +3,7 @@
 
 
 <div align="center">
- <img src="[path/to/your/logo.png](https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Wallpaper_lib/splash.gif?raw=true)" alt="Logo" >
+ <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Wallpaper_lib/splash.gif?raw=true" alt="Logo" >
 </div>
 
 
