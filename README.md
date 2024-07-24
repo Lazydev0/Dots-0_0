@@ -1,10 +1,13 @@
 
-![Logo](https://static.vecteezy.com/system/resources/previews/005/139/852/non_2x/bowl-with-rice-and-chopsticks-flat-illustration-icon-on-white-background-for-web-landing-page-sticker-banner-free-vector.jpg)
-
-
-
-
 # Dots-0_0
+
+
+![Logo]()
+
+
+
+
+## Description
 
 A simple rice made with hyprland 
 
