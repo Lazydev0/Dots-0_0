@@ -22,21 +22,21 @@ A simple rice made with hyprland
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/Terminals.png?raw=true" alt="Terminals" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of the terminals here.</em></p>
+  <p><em>Kitty.</em></p>
 </div>
 
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/Wallselect_color.png?raw=true" alt="Wallselect Color" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of the wallselect color here.</em></p>
+  <p><em>wallSelect</em></p>
 </div>
 
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/grey_paws.png?raw=true" alt="Grey Paws" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of the grey paws here.</em></p>
+  <p><em>Colorscheme: grey</em></p>
 </div>
 
 
@@ -44,33 +44,33 @@ A simple rice made with hyprland
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/neovim.png?raw=true" alt="Neovim" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of Neovim here.</em></p>
+  <p><em>Neovim</em></p>
 </div>
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/paws.png?raw=true" alt="Paws" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of the paws here.</em></p>
+  <p><em>Colorscheme: colorful</em></p>
 </div>
 
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/rofi.png?raw=true" alt="Rofi" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of Rofi here.</em></p>
+  <p><em>Rofi</em></p>
 </div>
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/spotify.png?raw=true" alt="Spotify" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of Spotify here.</em></p>
+  <p><em>Spotify</em></p>
 </div>
 
 
 
 <div>
   <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/themeselect.png?raw=true" alt="Theme Select" width="600"/>
-  <p><em>Placeholder: Insert a screenshot of the theme select here.</em></p>
+  <p><em>themeSelect</em></p>
 </div>
 
 
