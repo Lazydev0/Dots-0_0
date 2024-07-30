@@ -9,7 +9,7 @@
 
     "modules-left": ["custom/launcher","hyprland/window","memory","custom/rofi","custom/updates"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/swww-grey","custom/swww","network","battery","clock","tray","custom/power"],
+    "modules-right": ["custom/swww-grey","custom/swww","custom/spotify","battery","clock","tray","custom/power"],
 
 
 
@@ -100,7 +100,7 @@
 
     "custom/power": {
       	"format":"⏻",
-       	"on-click": "eww open powermenu",
+       	"on-click": "exec ~/Scripts/powermenu.sh",
       	"tooltip": false,
    },
 
@@ -131,6 +131,15 @@
         "format-linked": "{ifname} (No IP)    ",
         "format-disconnected": "Disconnected    ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "custom/spotify":{
+        "exec": "/usr/bin/python3 /home/nyx/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": "{}  ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     },
 
 

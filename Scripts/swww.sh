@@ -37,3 +37,6 @@ sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/menu.rasi"
 
 IMAGE2="image=${RANDOMPICS}"
 sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
+
+IMAGE1="background-image: url(\"${RANDOMPICS}\",width);"
+sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"

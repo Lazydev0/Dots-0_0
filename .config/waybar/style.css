@@ -61,7 +61,7 @@
 #custom-updates,
 #custom-swww,
 #custom-swww-grey,
-#custom-rofi,
+#custom-rofi,#custom-spotify, 
 #network {
   padding: 0 4px;
   background: #030406;
@@ -76,6 +76,7 @@
  * Module styles
  * -----------------------------------------------------------------------------
 */
+
 
 
 #clock {

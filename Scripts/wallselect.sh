@@ -50,6 +50,9 @@ if [[ -n "$SELECTION" ]]; then
 
   IMAGE2="image=${WALL_DIR}${BASENAME}"
   sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
+
+  IMAGE1="background-image: url(\"${WALL_DIR}${BASENAME}\",width);"
+  sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"
 else
   echo "No selection made in Rofi."
 fi

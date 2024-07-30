@@ -80,7 +80,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
 # Custom aliases 
-alias fixpacman='sudo rm /var/lib/pacman/db.lck'
+alias diagnose='sudo rm /var/lib/pacman/db.lck'
 alias grep='ugrep --color=auto'
 alias ip='ip -color'
 alias cat='bat'
@@ -106,6 +106,7 @@ alias pipes='pipes-rs'
 alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
+alias token='cat ~/Documents/Notes/Github/Lazy.txt'
 
 # Custom Functions
 
@@ -156,9 +157,9 @@ function jrun() {
     fi
     java_file="$1"
     class_name=$(basename -s .java "$java_file")
-    javac -d ~/Documents/Programming/Java/Classes/ "$java_file"
+    javac -d ~/Documents/Test/assignment_4/classes "$java_file"
     if [[ $? -eq 0 ]]; then
-        java -cp ~/Documents/Programming/Java/Classes/ "$class_name"
+        java -cp ~/Documents/Test/assignment_4/classes "$class_name"
     else
         echo "Compilation failed"
     fi
