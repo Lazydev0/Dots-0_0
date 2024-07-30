@@ -8,8 +8,8 @@ for app in imagemagick; do
 done
 
 # Set some variables
-WALL_DIR="${HOME}/Pictures/Colourful/"
-CACHE_DIR="${HOME}/.cache/rofi_icons/"
+WALL_DIR="${HOME}/Pictures/Gray/"
+CACHE_DIR="${HOME}/.cache/rofi_greyicons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi//wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
@@ -50,6 +50,9 @@ if [[ -n "$SELECTION" ]]; then
 
   IMAGE2="image=${WALL_DIR}${BASENAME}"
   sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
+
+  IMAGE1="background-image: url(\"${WALL_DIR}${BASENAME}\",width);"
+  sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"
 else
   echo "No selection made in Rofi."
 fi

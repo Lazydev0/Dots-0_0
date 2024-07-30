@@ -57,6 +57,9 @@ if [[ -n "$SELECTION" ]]; then
   IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
   sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/menu.rasi"
 
+  IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
+  sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"
+
   IMAGE2="image=${NEW_WALLPAPER}"
   sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
 

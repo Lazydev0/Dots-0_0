@@ -100,7 +100,7 @@
 
     "custom/power": {
       	"format":"⏻",
-       	"on-click": "eww open powermenu",
+       	"on-click": "exec ~/Scripts/powermenu.sh",
       	"tooltip": false,
    },
 

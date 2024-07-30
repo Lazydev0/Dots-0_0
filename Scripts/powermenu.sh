@@ -1,14 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Current Theme
 dir="$HOME/.config/rofi/"
 theme='powermenu'
 
 # CMDs
+lastlogin="$(last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7)"
 uptime="$(uptime -p | sed -e 's/up //g')"
 host=$(hostname)
 
 # Options
+hibernate=''
 shutdown=''
 reboot=''
 lock=''
@@ -20,21 +22,21 @@ no=''
 # Rofi CMD
 rofi_cmd() {
   rofi -dmenu \
-    -p "Uptime: $uptime" \
-    -mesg "Uptime: $uptime" \
+    -p " $USER@$host" \
+    -mesg " Uptime: $uptime" \
     -theme ${dir}/${theme}.rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
   rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
-    -theme-str 'mainbox {children: [ "message", "listview" ];}' \
+    -theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
     -theme-str 'listview {columns: 2; lines: 1;}' \
     -theme-str 'element-text {horizontal-align: 0.5;}' \
     -theme-str 'textbox {horizontal-align: 0.5;}' \
     -dmenu \
     -p 'Confirmation' \
-    -mesg 'Are you Sure?' \
+    -mesg 'Ya wanna leave daddy?' \
     -theme ${dir}/${theme}.rasi
 }
 
@@ -45,7 +47,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-  echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+  echo -e "$lock\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -56,20 +58,10 @@ run_cmd() {
       systemctl poweroff
     elif [[ $1 == '--reboot' ]]; then
       systemctl reboot
-    elif [[ $1 == '--suspend' ]]; then
-      mpc -q pause
-      amixer set Master mute
-      systemctl suspend
+    elif [[ $1 == '--lock' ]]; then
+      swaylock
     elif [[ $1 == '--logout' ]]; then
-      if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-        openbox --exit
-      elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-        bspc quit
-      elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-        i3-msg exit
-      elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-        qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-      fi
+      hyprctl dispatch exit
     fi
   else
     exit 0
@@ -86,12 +78,9 @@ $reboot)
   run_cmd --reboot
   ;;
 $lock)
-  swaylock
-  ;;
-$suspend)
-  run_cmd --hyprctl dispatch exit
+  run_cmd --lock
   ;;
 $logout)
-  run_cmd --hyprctl dispatch exit
+  run_cmd --logout
   ;;
 esac

@@ -1,19 +1,17 @@
-
-
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
+/*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
-
-   background:     #020308FF;
-    background-alt: #020308FF;
-    foreground:     #FFFFFFFF;
-    selected:       #41ce6cFF;
-    active:         #98C379FF;
-    urgent:         #E06C75FF;
+    background:                  #030609;
+    background-alt:              #020308;
+    foreground:                  #FFFFFF;
+    selected:                    #41ce6c;
+    active:                      #020308;
+    urgent:                      #020308;
 }
 
 /*
@@ -22,83 +20,65 @@ USE_BUTTONS=YES
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
     transparency:                "real";
-    location:                    east;
-    anchor:                      east;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
-    width:                       95px;
-    x-offset:                    -20px;
+    width:                       540px;
+    x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
-    enabled:                     true;
-    margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
-    enabled:                     true;
-    spacing:                     5px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
     background-color:            transparent;
-    children:                    [ "listview" ];
+    orientation:                 vertical;
+    children:                    [ "imagebox", "listview" ];
+}
+
+/*****----- Imagebox -----*****/
+imagebox {
+    expand:                      false;
+    width:                       380px;
+    spacing:                     0px;
+    padding:                     100px;
+    background-color:            transparent;
+    background-image: url("/home/nyx/Pictures/Gray//bush.jpg",width);
+    children:                    [ "inputbar", "dummy", "message" ];
+}
+
+/*****----- User -----*****/
+userimage {
+    margin:                      0px 0px;
+    border:                      10px;
+    border-radius:               0px;
+    border-color:                @background-alt;
+    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
-    spacing:                     5px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", "prompt"];
-}
-
-dummy {
-    background-color:            transparent;
-}
-
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "";
-    padding:                     12px 16px;
+    padding:                     20px;
     border-radius:               0px;
     background-color:            @urgent;
-    text-color:                  @background;
-}
-prompt {
-    enabled:                     true;
-    padding:                     12px;
-    border-radius:               0px;
-    background-color:            @active;
-    text-color:                  @background;
+    text-color:                  @foreground;
+    enabled:                     false;
 }
 
 /*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     15px;
-    border:                      0px solid;
-    border-radius:               100%;
-    border-color:                @selected;
-    background-color:            @background-alt;
+    padding:                     16px;
+    border-radius:               10px;
+    background-color:            @active;
     text-color:                  @foreground;
 }
 textbox {
@@ -106,24 +86,13 @@ textbox {
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @foreground;
-    blink:                       true;
-    markup:                      true;
-}
-error-message {
-    padding:                     12px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       5;
+    columns:                     4;
+    lines:                       1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -132,32 +101,23 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     15px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
+    spacing:                     30px;
+    margin:                      15px;
+    background-color:            transparent;
     cursor:                      "default";
 }
 
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     0px;
-    margin:                      0px;
-    padding:                     25px 10px;
-    border:                      0px solid;
-    border-radius:               10px;
-    border-color:                @selected;
+    padding:                     20px 10px;
+    border-radius:               0px;
     background-color:            @background-alt;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 24";
+    font:                        "feather bold 32";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

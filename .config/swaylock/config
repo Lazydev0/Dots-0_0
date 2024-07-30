@@ -17,7 +17,7 @@ datestr=%a, %B %e
 timestr=%I:%M %p
 
 # Image 
-image=/home/nyx/Pictures/Colourful/cup.png
+image=/home/nyx/Pictures/Gray//bush.jpg
 
 # Effects
 fade-in=2
