@@ -10,7 +10,7 @@ done
 # Set some variables
 WALL_DIR="${HOME}/Pictures/Colourful/"
 CACHE_DIR="${HOME}/.cache/rofi_icons/"
-ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi//wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
+ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
 MOITOR_RES=$(hyprctl monitors | grep -m1 "res: " | awk '{print $4}' | cut -d 'x' -f1)

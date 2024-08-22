@@ -80,7 +80,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
 # Custom aliases 
-alias diagnose='sudo rm /var/lib/pacman/db.lck'
+alias pacman_clean='sudo rm /var/lib/pacman/db.lck'
 alias grep='ugrep --color=auto'
 alias ip='ip -color'
 alias cat='bat'
@@ -107,7 +107,6 @@ alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
 alias token='cat ~/Documents/Notes/Github/Lazy.txt'
-alias sql='mariadb -A'
 # Custom Functions
 
 function src() {

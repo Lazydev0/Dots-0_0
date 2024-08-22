@@ -8,7 +8,7 @@ for app in imagemagick; do
 done
 
 # Set some variables
-CACHE_DIR="${HOME}/.cache/theme_icons/"
+CACHE_DIR="${HOME}/.cache/themeselect_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/themeselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
@@ -64,10 +64,10 @@ if [[ -n "$SELECTION" ]]; then
   sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
 
   if [[ "$CURRENT_WALLPAPER" == "/home/nyx/Pictures/Colourful/"* ]]; then
-    sed -i 's|WALL_DIR="${HOME}/Pictures/Colourful/"|WALL_DIR="${HOME}/Pictures/Gray/"|' ~/Dots/Scripts/wallselect.sh
-    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_icons/"|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|' ~/Dots/Scripts/wallselect.sh
+    sed -i 's|WALL_DIR="${HOME}/Pictures/Colourful/"|WALL_DIR="${HOME}/Pictures/Gray/"|' ~/Scripts/wallselect.sh
+    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_icons/"|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|' ~/Scripts/wallselect.sh
   else
-    sed -i 's|WALL_DIR="${HOME}/Pictures/Gray/"|WALL_DIR="${HOME}/Pictures/Colourful/"|' ~/Dots/Scripts/wallselect.sh
-    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|CACHE_DIR="${HOME}/.cache/rofi_icons/"|' ~/Dots/Scripts/wallselect.sh
+    sed -i 's|WALL_DIR="${HOME}/Pictures/Gray/"|WALL_DIR="${HOME}/Pictures/Colourful/"|' ~/Scripts/wallselect.sh
+    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|CACHE_DIR="${HOME}/.cache/rofi_icons/"|' ~/Scripts/wallselect.sh
   fi
 fi
