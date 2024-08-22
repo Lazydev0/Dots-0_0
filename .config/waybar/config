@@ -3,7 +3,7 @@
     "layer": "top", 
     "position": "top", 
     "height": 30,
-    "width":1900,
+    "width":1920,
     "margin": "5 0 0 0",
     "spacing":0,
 
@@ -54,7 +54,7 @@
     "clock": {
       "format": "<span foreground='#abf9c2'>  </span>{:%a %d   %H:%M}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "on-click":"foot -e tty-clock -c -C 2 -B"
+      "on-click":"alacritty -e tty-clock -c -C 2 -B"
    },
 
 

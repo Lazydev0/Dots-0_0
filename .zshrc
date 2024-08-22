@@ -10,6 +10,9 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export PATH=$PATH:/home/nyx/.spicetify
 export FZF_DEFAULT_OPTS="--color=16 --layout=reverse --border=sharp --prompt='FZF> '"
+export FLUTTER_ROOT="$HOME/.cache/flutter_sdk"
+export PATH="$FLUTTER_ROOT/bin:$PATH"
+export CHROME_EXECUTABLE=$(which firefox)
 
 # No errors
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
