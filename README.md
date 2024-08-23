@@ -21,7 +21,7 @@ A simple rice made with hyprland
 
 
 <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/Terminals.png?raw=true" alt="Terminals" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/Terminals.png" alt="Terminals" width="600"/>
    
   </div>
 
