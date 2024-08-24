@@ -1,0 +1,24 @@
+return {
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("null-ls").setup({
+        sources = {
+          require("null-ls").builtins.formatting.dart_format,
+        },
+      })
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.dart",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+      })
+    end,
+  },
+}

@@ -124,22 +124,13 @@
         "tooltip":false,
       },
 
-    "network": {
-        "format-wifi": "{essid}    ",
-        "format-ethernet": "{ipaddr}/{cidr}    ",
-        "tooltip-format": "{ifname} via {gwaddr}    ",
-        "format-linked": "{ifname} (No IP)    ",
-        "format-disconnected": "Disconnected    ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-
     "custom/spotify":{
         "exec": "/usr/bin/python3 /home/nyx/.config/waybar/scripts/mediaplayer.py --player spotify",
         "format": "{}  ",
         "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-scroll-up": "playerctl --player=spotify next",
+        "on-scroll-down": "playerctl --player=spotify previous"
     },
 
 

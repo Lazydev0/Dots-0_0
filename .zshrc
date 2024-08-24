@@ -13,6 +13,7 @@ export FZF_DEFAULT_OPTS="--color=16 --layout=reverse --border=sharp --prompt='FZ
 export FLUTTER_ROOT="$HOME/.cache/flutter_sdk"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
 export CHROME_EXECUTABLE=$(which firefox)
+export EDITOR='neovide'
 
 # No errors
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -124,7 +125,6 @@ function cleanup() {
     done
 }
 
-
 function backupd() {
     if [[ -z $1 ]]; then
         echo "Usage: backupd <filename>"
@@ -167,8 +167,6 @@ function jrun() {
     fi
 }
 
-
-
 function crun() {
     if [[ -z $1 ]]; then
         echo "Usage: crun <filename.cpp>"
@@ -193,6 +191,31 @@ function crun() {
         return 1
     fi
 }
+
+function trash() {
+    file=$1 
+    if [[ -z $1 ]]; then 
+        echo "Usage: trash <filename>"
+        return 1 
+    fi 
+
+    if [[ ! -d "$HOME/Trash" ]]; then
+        mkdir -p "$HOME/Trash"
+    fi
+    mv "$file" "$HOME/Trash/$file"
+}
+
+function empty() {
+    if [[ ! -d "$HOME/Trash" ]]; then
+        echo "Trash directory does not exist."
+        return 1
+    fi
+    rm -rf ~/Trash/* 
+
+    echo "Trash has been emptied."
+}
+
+
 
 
 

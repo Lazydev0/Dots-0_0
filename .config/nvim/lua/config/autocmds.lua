@@ -1,3 +1,7 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
--- Add any additional autocmds here
+-- Create an autocommand for formatting Dart files on save
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.dart",
+--   callback = function()
+--     vim.lsp.buf.format({ async = true })
+--   end,
+-- })
