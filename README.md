@@ -21,43 +21,43 @@ A simple rice made with hyprland
 
 
 <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/Terminals.png?raw=true" alt="Terminals" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/Terminals.png" alt="Terminals" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/Wallselect_color.png?raw=true" alt="Wallselect Color" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/Wallselect_color.png" alt="Wallselect Color" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/grey_paws.png?raw=true" alt="Grey Paws" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/grey_paws.png" alt="Grey Paws" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/neovim.png?raw=true" alt="Neovim" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/neovim.png" alt="Neovim" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/paws.png?raw=true" alt="Paws" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/paws.png" alt="Paws" width="600"/>
     
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/rofi.png?raw=true" alt="Rofi" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/rofi.png" alt="Rofi" width="600"/>
  
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/spotify.png?raw=true" alt="Spotify" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/spotify.png" alt="Spotify" width="600"/>
   
   </div>
 
 
  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/main/Pictures/Screenshots/Rice/themeselect.png?raw=true" alt="Theme Select" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/themeselect.png" alt="Theme Select" width="600"/>
    
   </div>
 
