@@ -20,11 +20,9 @@ host=$(hostname)
 # Options
 shutdown='󰐥'
 reboot='󰜉'
-lock=''
+lock='󰌾'
 suspend='󰤄'
 logout='󰍃'
-yes=''
-no=''
 
 # Rofi CMD
 rofi_cmd() {

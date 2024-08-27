@@ -7,9 +7,9 @@
     "margin": "5 0 0 0",
     "spacing":0,
 
-    "modules-left": ["custom/launcher","hyprland/window","memory","custom/rofi","custom/updates"],
+    "modules-left": ["custom/launcher","hyprland/window","memory","custom/rofi","custom/swww","custom/updates"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/swww-grey","custom/swww","custom/spotify","battery","clock","tray","custom/power"],
+    "modules-right": ["custom/spotify","battery","clock","custom/swww-grey","tray","custom/power"],
 
 
 
@@ -88,8 +88,8 @@
        "format": "{} {icon}",
        "return-type": "json",
        "format-icons": {
-           "has-updates": "󱍷",
-           "updated": "󰂪",
+           "has-updates": "",
+           "updated": "󱦟",
         "interval": 7200,
        },
        "exec-if": "which waybar-module-pacman-updates",
@@ -99,7 +99,7 @@
 
 
     "custom/power": {
-      	"format":"⏻",
+      	"format":"󰤄",
        	"on-click": "exec ~/Scripts/powermenu.sh",
       	"tooltip": false,
    },
@@ -113,20 +113,20 @@
 
 
      "custom/swww":{
-        "format":"🌕",
+        "format":"",
         "on-click":"exec $HOME/Scripts/swww.sh",
         "tooltip":false,
       },
     
     "custom/swww-grey":{
-        "format":"🌓",
+        "format":"",
         "on-click":"exec $HOME/Scripts/swww-grey.sh",
         "tooltip":false,
       },
 
     "custom/spotify":{
         "exec": "/usr/bin/python3 /home/nyx/.config/waybar/scripts/mediaplayer.py --player spotify",
-        "format": "{}  ",
+        "format": "{}  󰓇",
         "return-type": "json",
         "on-click": "playerctl --player=spotify play-pause",
         "on-scroll-up": "playerctl --player=spotify next",
