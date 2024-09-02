@@ -1,3 +1,5 @@
+# bash ~/Scripts/pattern.sh
+
 # Enable Powerlevel10k instant prompt. 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -16,7 +18,7 @@ export CHROME_EXECUTABLE=$(which brave)
 export EDITOR='neovide'
 
 # No errors
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -105,12 +107,16 @@ alias btop='btop --utf-force'
 alias ping='ping -c 5'
 alias deploy='mimeopen'
 alias clock='tty-clock'
-alias fetch='fm6000 -r -c yellow -n -g 12 -l 16'
+alias fetch='fm6000 -wally -c red -n -g 12 -l 16 --not-de'
 alias pipes='pipes-rs'
 alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
 alias token='cat ~/Documents/Notes/Github/Lazy.txt'
+alias pattern='~/Scripts/pattern.sh'
+
+
+
 # Custom Functions
 
 function src() {
@@ -216,6 +222,11 @@ function empty() {
 }
 
 
+function bloody() {
+    local txt="$1"
+
+    echo "$txt" | figlet -f Bloody | lolcat
+}
 
 
 

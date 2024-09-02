@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-## Author : Aditya Shakya (adi1090x)
-## Github : @adi1090x
-#
-## Rofi   : Power Menu
-#
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
-
 # Current Theme
 dir="$HOME/.config/rofi"
 theme='powermenu'
@@ -23,13 +14,33 @@ reboot='󰜉'
 lock='󰌾'
 suspend='󰤄'
 logout='󰍃'
+yes=''
+no=''
 
 # Rofi CMD
 rofi_cmd() {
   rofi -dmenu \
-    -p "Goodbye ${USER}" \
+    -p "Uptime: $uptime" \
     -mesg "Uptime: $uptime" \
     -theme ${dir}/${theme}.rasi
+}
+
+# Confirmation CMD
+confirm_cmd() {
+  rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
+    -theme-str 'mainbox {children: [ "message", "listview" ];}' \
+    -theme-str 'listview {columns: 2; lines: 1;}' \
+    -theme-str 'element-text {horizontal-align: 0.5;}' \
+    -theme-str 'textbox {horizontal-align: 0.5;}' \
+    -dmenu \
+    -p 'Confirmation' \
+    -mesg 'Ya wanna leave daddy?' \
+    -theme ${dir}/${theme}.rasi
+}
+
+# Ask for confirmation
+confirm_exit() {
+  echo -e "$yes\n$no" | confirm_cmd
 }
 
 # Pass variables to rofi dmenu

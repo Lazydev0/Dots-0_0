@@ -1,11 +1,9 @@
 #!/bin/bash
 
-killall waybar
-
-sleep 2
-
-if [ "$USER" -eq "nyx" ]; then
-	waybar -c ~/.config/waybar/config -s ~/.config/waybar/style.css
+if pgrep -x waybar >/dev/null; then
+  sleep 0.4
+  pkill -x waybar
 else
-	waybar &
+  sleep 0.4
+  waybar &
 fi
