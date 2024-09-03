@@ -26,12 +26,12 @@ A simple rice made with hyprland
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/Wallselect_color.png" alt="Wallselect Color" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/wallSelect.png" alt="Wallselect Color" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/grey_paws.png" alt="Grey Paws" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/grey.png" alt="Grey Paws" width="600"/>
    
   </div>
 
@@ -41,7 +41,7 @@ A simple rice made with hyprland
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/paws.png" alt="Paws" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/greyWallSelect.png" alt="Paws" width="600"/>
     
   </div>
 
@@ -51,13 +51,13 @@ A simple rice made with hyprland
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/spotify.png" alt="Spotify" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/Spotify.png" alt="Spotify" width="600"/>
   
   </div>
 
 
  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/themeselect.png" alt="Theme Select" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Screenshots/Rice/themeSelect.png" alt="Theme Select" width="600"/>
    
   </div>
 
