@@ -113,7 +113,7 @@ alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
 alias token='cat ~/Documents/Notes/Github/Lazy.txt'
-alias pattern='~/Scripts/pattern.sh'
+alias shebang='~/Scripts/pattern.sh'
 
 
 

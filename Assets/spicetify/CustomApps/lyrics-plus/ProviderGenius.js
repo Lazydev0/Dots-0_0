@@ -51,14 +51,14 @@ const ProviderGenius = (() => {
 		return new Promise((resolve, reject) => {
 			const request = JSON.stringify({
 				method: "GET",
-				uri: url
+				uri: url,
 			});
 
 			window.sendCosmosRequest({
 				request,
 				persistent: false,
 				onSuccess: resolve,
-				onFailure: reject
+				onFailure: reject,
 			});
 		});
 	}
@@ -104,14 +104,14 @@ const ProviderGenius = (() => {
 		let lyrics;
 		let hits;
 		for (const title of titles) {
-			const query = new URLSearchParams({ per_page: 20, q: encodeURIComponent(`${title} ${info.artist}`) });
+			const query = new URLSearchParams({ per_page: 20, q: `${info.artist} ${title}` });
 			const url = `https://genius.com/api/search/song?${query.toString()}`;
 
 			const geniusSearch = await Spicetify.CosmosAsync.get(url);
 
-			hits = geniusSearch.response.sections[0].hits.map(item => ({
+			hits = geniusSearch.response.sections[0].hits.map((item) => ({
 				title: item.result.full_title,
-				url: item.result.url
+				url: item.result.url,
 			}));
 
 			if (!hits.length) {
