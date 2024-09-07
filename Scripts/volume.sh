@@ -20,7 +20,7 @@ esac
 VOLUME=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
 
 send_notification() {
-  if [ "$1" = "mute" ]; then ICON=~/.local/share/icons/Custom/muteVol.svg; elif [ "$VOLUME" -lt 50 ]; then ICON=~/.local/share/icons/Custom/offVol.svg; elif [ "$VOLUME" -lt 100 ]; then ICON=~/.local/share/icons/Custom/lowVol.svg; else ICON=~/.local/share/icons/Custom/highVol.svg; fi
+  ICON=~/.local/share/icons/Custom/Vol.png
   if [ "$1" = "mute" ]; then TEXT="Currently muted"; else TEXT="Currently at ${VOLUME}%"; fi
 
   dunstify -a "Volume" -r 9993 -h int:value:"$VOLUME" -i "$ICON" "Volume" "$TEXT " -t 2000
