@@ -45,8 +45,8 @@ listview {
     enabled:                     true;
     columns:                     2;
     lines:                       1;
-    spacing:                     100px;
-    padding:                     20px 350px;
+    spacing:                     55px;
+    padding:                     20px 710px;
     cycle:                       true;
     dynamic:                     false;
     scrollbar:                   false;
@@ -62,7 +62,7 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    orientation:                 horizontal;
+    orientation:                 vertical;
     spacing:                     0px;
     padding:                     0px;
     border-radius:               20px;
@@ -97,4 +97,5 @@ element-text {
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
+    padding:                     20px;
 }

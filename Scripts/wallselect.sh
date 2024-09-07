@@ -39,7 +39,7 @@ if [[ -n "$SELECTION" ]]; then
   swww query || swww init
 
   # Change the wallpaper using swww with the specified transition parameters
-  swww img "${WALL_DIR}${BASENAME}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,0.970
+  swww img "${WALL_DIR}${BASENAME}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1
 
   # Save the current wallpaper name
   echo "$BASENAME" >"$TRACKING_FILE"
