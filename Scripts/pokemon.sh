@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PATTERN_DIR="$HOME/.config/pattern/"
-PREV_PATTERN_FILE="$HOME/Pictures/Screenshots/Variables/trackPattern.txt"
+PATTERN_DIR="$HOME/.config/termArt/pokemon/"
+PREV_PATTERN_FILE="$HOME/Pictures/Screenshots/Variables/trackPokemon.txt"
 
 # Get a list of all patterns in the directory
 PATTERN=("$PATTERN_DIR"/*)

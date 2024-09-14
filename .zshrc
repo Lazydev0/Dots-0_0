@@ -1,4 +1,4 @@
-# bash ~/Scripts/pattern.sh
+#  bash ~/Scripts/pokemon.sh
 
 # Enable Powerlevel10k instant prompt. 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -113,7 +113,7 @@ alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
 alias token='cat ~/Documents/Notes/Github/Lazy.txt'
-alias shebang='~/Scripts/pattern.sh'
+alias shebang='~/Scripts/shebang.sh'
 
 
 
