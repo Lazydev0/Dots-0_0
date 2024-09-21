@@ -1,4 +1,4 @@
-#  bash ~/Scripts/pokemon.sh
+# bash ~/Scripts/pokemon.sh
 
 # Enable Powerlevel10k instant prompt. 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -14,11 +14,15 @@ export PATH=$PATH:/home/nyx/.spicetify
 export FZF_DEFAULT_OPTS="--color=16 --layout=reverse --border=sharp --prompt='FZF> '"
 export FLUTTER_ROOT="$HOME/.cache/flutter_sdk"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export CHROME_EXECUTABLE=$(which brave)
 export EDITOR='neovide'
 
 # No errors
  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# oh-my-posh config
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/default.json)"
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -33,7 +37,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -90,16 +94,16 @@ alias pacman_clean='sudo rm /var/lib/pacman/db.lck'
 alias grep='ugrep --color=auto'
 alias ip='ip -color'
 alias cat='bat'
+alias catp='bat --plain'
 alias ls='eza -al --color=always --group-directories-first --icons'
 alias anime='~/Assets/ani-cli/ani-cli'
-alias tree='~/Assets/tree/gt'
 alias convert='~/Scripts/img_converter.sh'
 alias cp='cp -rv'
 alias mv='mv -v'
 alias nvim='setsid neovide'
 alias rm='rm -riv'
-alias vpn='protonvpn-cli c'
-alias dvpn='protonvpn-cli d'
+alias vpn='sudo protonvpn c'
+alias dvpn='sudo protonvpn d'
 alias matrix='neo-matrix'
 alias bonsai='cbonsai'
 alias help='tldr'
@@ -108,12 +112,13 @@ alias ping='ping -c 5'
 alias deploy='mimeopen'
 alias clock='tty-clock'
 alias fetch='fm6000 -wally -c red -n -g 12 -l 16 --not-de'
-alias pipes='pipes-rs'
 alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
-alias token='cat ~/Documents/Notes/Github/Lazy.txt'
-alias shebang='~/Scripts/shebang.sh'
+alias lazytoken='cat ~/Documents/My_Docs/Passwords/LazyDev_token.txt'
+alias nyxtoken='cat ~/Documents/My_Docs/Passwords/SpaceNix_token.txt'
+alias passwords='cat ~/Documents/My_Docs/Passwords/Passwords.txt'
+alias run='ranger'
 
 
 
