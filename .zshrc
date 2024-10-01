@@ -17,7 +17,7 @@ export PATH="$FLUTTER_ROOT/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export CHROME_EXECUTABLE=$(which brave)
 export EDITOR='neovide'
- export AvatarAPIBaseURL="http://avatarquotes.xyz/api"
+export AvatarAPIBaseURL="http://avatarquotes.xyz/api"
 
 # No errors
  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
