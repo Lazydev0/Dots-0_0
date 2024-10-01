@@ -8,8 +8,8 @@ for app in imagemagick; do
 done
 
 # Set some variables
-WALL_DIR="${HOME}/Pictures/Gray/"
-CACHE_DIR="${HOME}/.cache/rofi_greyicons/"
+WALL_DIR="${HOME}/Pictures/Colourful/"
+CACHE_DIR="${HOME}/.cache/rofi_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
@@ -39,7 +39,7 @@ if [[ -n "$SELECTION" ]]; then
   swww query || swww init
 
   # Change the wallpaper using swww with the specified transition parameters
-  swww img "${WALL_DIR}${BASENAME}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1
+  swww img "${WALL_DIR}${BASENAME}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Wallpaper changed to $BASENAME" -i "${CACHE_DIR}${BASENAME}"
 
   # Save the current wallpaper name
   echo "$BASENAME" >"$TRACKING_FILE"

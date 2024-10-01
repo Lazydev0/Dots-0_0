@@ -3,7 +3,6 @@
 # Define the directories for colorful and black-and-white wallpapers
 COLOR_DIR="$HOME/Pictures/Colourful/"
 BW_DIR="$HOME/Pictures/Gray/"
-# Define the path to the file storing the last wallpaper name
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
 # Determine the current wallpaper displayed by swww
@@ -11,22 +10,21 @@ CURRENT_WALLPAPER=$(swww query | grep "currently displaying:" | awk -F 'image: '
 
 # Check if the current wallpaper is in the colorful directory
 if [[ "$CURRENT_WALLPAPER" == "$COLOR_DIR"* ]]; then
-  # It's currently displaying a colorful wallpaper, select a random wallpaper from the colorful directory
   PICS=("$COLOR_DIR"/*)
+  CACHEDIR=~/.cache/rofi_icons/
 else
-  # It's currently displaying a grayscale wallpaper, select a random wallpaper from the grayscale directory
   PICS=("$BW_DIR"/*)
+  CACHEDIR=~/.cache/rofi_greyicons/
 fi
 
-# Select a random wallpaper from the list
-RANDOMPICS="${PICS[RANDOM % ${#PICS[@]}]}"
-BASENAME=$(basename "$RANDOMPICS")
+RANDOMPIC="${PICS[RANDOM % ${#PICS[@]}]}"
+BASENAME=$(basename "$RANDOMPIC")
 
 # Initialize swww if it isn't already running
 swww query || swww init
 
 # Change the wallpaper using swww with the specified transition parameters
-swww img "$RANDOMPICS" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1
+swww img "$RANDOMPIC" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Wallpaper switched to $BASENAME" -i ${CACHEDIR}/${BASENAME}
 
 # Save the current wallpaper name
 echo "$BASENAME" >"$TRACKING_FILE"

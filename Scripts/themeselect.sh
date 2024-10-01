@@ -11,7 +11,6 @@ done
 CACHE_DIR="${HOME}/.cache/themeselect_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/themeselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
-
 MONITOR_RES=$(hyprctl monitors | grep -m1 "res: " | awk '{print $4}' | cut -d 'x' -f1)
 MONITOR_SCALE=$(hyprctl monitors | grep -m1 "scale: " | awk '{print $2}')
 MONITOR_RES=$((MONITOR_RES * 17 / MONITOR_SCALE))
@@ -39,8 +38,10 @@ if [[ -n "$SELECTION" ]]; then
   # Determine the new wallpaper based on the selected mode
   if [[ "$SELECTION" == "Colourful_mode.png" ]]; then
     NEW_WALLPAPER="${HOME}/Pictures/Colourful/$BASENAME"
+    ICONDIR=~/.cache/rofi_icons/
   elif [[ "$SELECTION" == "gray_mode.png" ]]; then
     NEW_WALLPAPER="${HOME}/Pictures/Gray/$BASENAME"
+    ICONDIR=~/.cache/rofi_greyicons/
   else
     echo "Invalid selection."
     exit 1
@@ -48,7 +49,7 @@ if [[ -n "$SELECTION" ]]; then
   swww query || swww init
 
   # Change the wallpaper using swww with the specified transition parameters
-  swww img "${NEW_WALLPAPER}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1
+  swww img "${NEW_WALLPAPER}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Grayscale $BASENAME" -i ${ICONDIR}/${BASENAME}
 
   # Save the current wallpaper name
   echo "$BASENAME" >"$TRACKING_FILE"

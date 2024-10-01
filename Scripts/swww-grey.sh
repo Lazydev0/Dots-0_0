@@ -16,16 +16,14 @@ else
   exit 1
 fi
 
-# Determine the current wallpaper displayed by swww
 CURRENT_WALLPAPER=$(swww query | grep "currently displaying:" | awk -F 'image: ' '{print $2}')
 
-# Check if the current wallpaper is in the colorful directory
 if [[ "$CURRENT_WALLPAPER" == "$COLOR_DIR"* ]]; then
-  # It's currently displaying a colorful wallpaper, switch to grayscale
   NEW_WALLPAPER="$BW_WALLPAPER"
+  CACHEDIR=~/.cache/rofi_greyicons/
 else
-  # It's currently displaying a grayscale wallpaper, toggle back to colorful
   NEW_WALLPAPER="$COLOR_WALLPAPER"
+  CACHEDIR=~/.cache/rofi_icons/
 fi
 
 if [[ "$CURRENT_WALLPAPER" == "/home/nyx/Pictures/Colourful/"* ]]; then
@@ -40,7 +38,7 @@ fi
 swww query || swww init
 
 # Change the wallpaper using swww with the specified transition parameters
-swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1
+swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Grayscale $BASENAME" -i "${CACHEDIR}/${BASENAME}"
 
 # Save the current wallpaper name
 echo "$BASENAME" >"$TRACKING_FILE"
