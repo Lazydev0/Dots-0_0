@@ -107,7 +107,7 @@
 
     "custom/launcher": {
       "format":"    ",
-    	"on-click": "eww open launch",
+    	"on-click": "kitty -e ranger",
     	"tooltip": false,
      },
 
