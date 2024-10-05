@@ -38,7 +38,7 @@ if [[ -n "$SELECTION" ]]; then
   case "$SELECTION" in
   "Colourful_mode.png")
     NEW_WALLPAPER="${HOME}/Pictures/Colourful/$BASENAME"
-    BLURREDDIR="${HOME}/Pictures/Color__Blurred/"
+    BLURREDDIR="${HOME}/Pictures/Color_Blurred/"
     ICONDIR="${HOME}/.cache/rofi_icons/"
     ;;
   "gray_mode.png")

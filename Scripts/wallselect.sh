@@ -10,8 +10,8 @@ done
 # Set some variables
 COLORDIR=$HOME/Pictures/Colourful/
 GRAYDIR=$HOME/Pictures/Gray/
-WALL_DIR="/home/nyx/Pictures/Gray/"
-CACHE_DIR="/home/nyx/.cache/rofi_greyicons/"
+WALL_DIR="/home/nyx/Pictures/Colourful/"
+CACHE_DIR="/home/nyx/.cache/rofi_icons/"
 ROFI_EXECUTE="rofi -dmenu -theme ${HOME}/.config/rofi/wallselect.rasi -theme-str ${ROFI_OVERRIDE}"
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
 
