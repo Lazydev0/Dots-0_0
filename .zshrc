@@ -120,6 +120,7 @@ alias lazytoken='cat ~/Documents/My_Docs/Passwords/LazyDev_token.txt'
 alias nyxtoken='cat ~/Documents/My_Docs/Passwords/SpaceNix_token.txt'
 alias passwords='cat ~/Documents/My_Docs/Passwords/Passwords.txt'
 alias run='ranger'
+alias neofetch="catnap"
 
 
 

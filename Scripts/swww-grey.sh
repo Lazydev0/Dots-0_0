@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Define the directories for colorful and black-and-white wallpapers
+# Define directories for colorful and black-and-white wallpapers
 COLOR_DIR="$HOME/Pictures/Colourful/"
 BW_DIR="$HOME/Pictures/Gray/"
-# Define the path to the file storing the last wallpaper name
 TRACKING_FILE="$HOME/Pictures/Screenshots/Variables/wallpaper_tracking.txt"
+WALLSCRIPT="$HOME/Scripts/wallselect.sh"
 
-# Get the last wallpaper name
+# Check if the last wallpaper name exists
 if [[ -f "$TRACKING_FILE" ]]; then
   BASENAME=$(cat "$TRACKING_FILE")
   COLOR_WALLPAPER="$COLOR_DIR/$BASENAME"
@@ -16,39 +16,39 @@ else
   exit 1
 fi
 
+# Get the current wallpaper from swww
 CURRENT_WALLPAPER=$(swww query | grep "currently displaying:" | awk -F 'image: ' '{print $2}')
 
+# Determine the new wallpaper and corresponding directories
 if [[ "$CURRENT_WALLPAPER" == "$COLOR_DIR"* ]]; then
   NEW_WALLPAPER="$BW_WALLPAPER"
-  CACHEDIR=~/.cache/rofi_greyicons/
+  CACHEDIR="$HOME/.cache/rofi_greyicons/"
+  BLURREDDIR="$HOME/Pictures/Gray_Blurred/"
+  # Update paths in wallselect.sh for grayscale wallpapers
+  sed -i "s|WALL_DIR=.*|WALL_DIR=\"$BW_DIR\"|" "$WALLSCRIPT"
+  sed -i "s|CACHE_DIR=.*|CACHE_DIR=\"$CACHEDIR\"|" "$WALLSCRIPT"
 else
   NEW_WALLPAPER="$COLOR_WALLPAPER"
-  CACHEDIR=~/.cache/rofi_icons/
+  CACHEDIR="$HOME/.cache/rofi_icons/"
+  BLURREDDIR="$HOME/Pictures/Color_Blurred/"
+  # Update paths in wallselect.sh for colorful wallpapers
+  sed -i "s|WALL_DIR=.*|WALL_DIR=\"$COLOR_DIR\"|" "$WALLSCRIPT"
+  sed -i "s|CACHE_DIR=.*|CACHE_DIR=\"$CACHEDIR\"|" "$WALLSCRIPT"
 fi
 
-if [[ "$CURRENT_WALLPAPER" == "/home/nyx/Pictures/Colourful/"* ]]; then
-  sed -i 's|WALL_DIR="${HOME}/Pictures/Colourful/"|WALL_DIR="${HOME}/Pictures/Gray/"|' ~/Scripts/wallselect.sh
-  sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_icons/"|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|' ~/Scripts/wallselect.sh
-else
-  sed -i 's|WALL_DIR="${HOME}/Pictures/Gray/"|WALL_DIR="${HOME}/Pictures/Colourful/"|' ~/Scripts/wallselect.sh
-  sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|CACHE_DIR="${HOME}/.cache/rofi_icons/"|' ~/Scripts/wallselect.sh
-fi
-
-# Initialize swww if it isn't already running
+# Initialize swww if not already running
 swww query || swww init
 
-# Change the wallpaper using swww with the specified transition parameters
-swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Grayscale $BASENAME" -i "${CACHEDIR}/${BASENAME}"
+# Change the wallpaper with transition
+swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 1 --transition-pos 0.680,1 &&
+  [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorify $BASENAME" -i "${CACHEDIR}${BASENAME}" || dunstify "Gratify $BASENAME" -i "${CACHEDIR}${BASENAME}"
 
-# Save the current wallpaper name
+# Update the wallpaper tracking file
 echo "$BASENAME" >"$TRACKING_FILE"
 
 # Update the rofi config with the new wallpaper
-IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
+IMAGE1="background-image: url(\"$NEW_WALLPAPER\",width);"
 sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/menu.rasi"
 
-IMAGE2="image=${NEW_WALLPAPER}"
-sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
-
-IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
-sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"
+# Update the hyprlock config with the blurred wallpaper path
+sed -i "s#path=.*#path=$BLURREDDIR/$BASENAME#" "$HOME/.config/hypr/hyprlock.conf"

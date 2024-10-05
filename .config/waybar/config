@@ -63,16 +63,6 @@
         "on-click": "kitty -e btop --utf-force"
     },
 
-
-    "backlight": {
-        "format": "{icon} {percent: >3}%",
-        "format-icons": ["", ""],
-        "on-scroll-down": "brightnessctl -c backlight set 1%-",
-        "on-scroll-up": "brightnessctl -c backlight set +1%",
-        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
-    },
-
-
     "battery": {
         "states": {
             "good": 90,

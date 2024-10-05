@@ -6,4 +6,3 @@ MINUTES=${TIME:3:2}
 
 # Print them vertically
 echo "$HOURS"
-echo "$MINUTES"

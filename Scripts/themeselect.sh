@@ -33,42 +33,40 @@ SELECTION=$(find "${CACHE_DIR}" -type f \( -iname "*.png" \) -exec basename {} \
   echo -en "$A\x00icon\x1f${CACHE_DIR}${A}\n"
 done | $ROFI_EXECUTE)
 
+# Validate selection
 if [[ -n "$SELECTION" ]]; then
-
-  # Determine the new wallpaper based on the selected mode
-  if [[ "$SELECTION" == "Colourful_mode.png" ]]; then
+  case "$SELECTION" in
+  "Colourful_mode.png")
     NEW_WALLPAPER="${HOME}/Pictures/Colourful/$BASENAME"
-    ICONDIR=~/.cache/rofi_icons/
-  elif [[ "$SELECTION" == "gray_mode.png" ]]; then
+    BLURREDDIR="${HOME}/Pictures/Color__Blurred/"
+    ICONDIR="${HOME}/.cache/rofi_icons/"
+    ;;
+  "gray_mode.png")
     NEW_WALLPAPER="${HOME}/Pictures/Gray/$BASENAME"
-    ICONDIR=~/.cache/rofi_greyicons/
-  else
-    echo "Invalid selection."
+    BLURREDDIR="${HOME}/Pictures/Gray_Blurred/"
+    ICONDIR="${HOME}/.cache/rofi_greyicons/"
+    ;;
+  *)
+    dunstify "Invalid selection"
     exit 1
-  fi
+    ;;
+  esac
+
+  # Initialize `swww` if not already running
   swww query || swww init
 
-  # Change the wallpaper using swww with the specified transition parameters
-  swww img "${NEW_WALLPAPER}" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 2 --transition-pos 0.680,1 && dunstify "Grayscale $BASENAME" -i ${ICONDIR}/${BASENAME}
+  # Change wallpaper with transition
+  swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 1 --transition-pos 0.680,1 &&
+    [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorify $BASENAME" -i "${ICONDIR}${BASENAME}" || dunstify "Gratify $BASENAME" -i "${ICONDIR}${BASENAME}"
 
-  # Save the current wallpaper name
+  # Save current wallpaper name
   echo "$BASENAME" >"$TRACKING_FILE"
 
-  # Update the rofi config with the new wallpaper
-  IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
-  sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/menu.rasi"
+  # Update rofi and hyprlock configs
+  sed -i "s#background-image:.*#background-image: url(\"${NEW_WALLPAPER}\",width);#" "$HOME/.config/rofi/menu.rasi"
+  sed -i "s#path=.*#path=$BLURREDDIR/$BASENAME#" "$HOME/.config/hypr/hyprlock.conf"
 
-  IMAGE1="background-image: url(\"${NEW_WALLPAPER}\",width);"
-  sed -i "s#background-image:.*#${IMAGE1}#" "$HOME/.config/rofi/powermenu.rasi"
-
-  IMAGE2="image=${NEW_WALLPAPER}"
-  sed -i "s#^image=.*#${IMAGE2}#" "$HOME/.config/swaylock/config"
-
-  if [[ "$CURRENT_WALLPAPER" == "/home/nyx/Pictures/Colourful/"* ]]; then
-    sed -i 's|WALL_DIR="${HOME}/Pictures/Colourful/"|WALL_DIR="${HOME}/Pictures/Gray/"|' ~/Scripts/wallselect.sh
-    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_icons/"|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|' ~/Scripts/wallselect.sh
-  else
-    sed -i 's|WALL_DIR="${HOME}/Pictures/Gray/"|WALL_DIR="${HOME}/Pictures/Colourful/"|' ~/Scripts/wallselect.sh
-    sed -i 's|CACHE_DIR="${HOME}/.cache/rofi_greyicons/"|CACHE_DIR="${HOME}/.cache/rofi_icons/"|' ~/Scripts/wallselect.sh
-  fi
+  # Update paths in wallpaper selection script
+  sed -i "s|WALL_DIR=.*|WALL_DIR=\"${NEW_WALLPAPER%/*}/\"|" ~/Scripts/wallselect.sh
+  sed -i "s|CACHE_DIR=.*|CACHE_DIR=\"$ICONDIR\"|" ~/Scripts/wallselect.sh
 fi
