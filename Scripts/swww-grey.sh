@@ -41,7 +41,7 @@ swww query || swww init
 
 # Change the wallpaper with transition
 swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 1 --transition-pos 0.680,1 &&
-  [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorify $BASENAME" -i "${CACHEDIR}${BASENAME}" || dunstify "Gratify $BASENAME" -i "${CACHEDIR}${BASENAME}"
+  [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorize $BASENAME" -i "${CACHEDIR}${BASENAME}" || dunstify "Grayscale $BASENAME" -i "${CACHEDIR}${BASENAME}"
 
 # Update the wallpaper tracking file
 echo "$BASENAME" >"$TRACKING_FILE"

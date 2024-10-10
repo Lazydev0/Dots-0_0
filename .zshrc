@@ -16,7 +16,7 @@ export FLUTTER_ROOT="$HOME/.cache/flutter_sdk"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export CHROME_EXECUTABLE=$(which brave)
-export EDITOR='neovide'
+export EDITOR='nvim'
 export AvatarAPIBaseURL="http://avatarquotes.xyz/api"
 
 # No errors
@@ -101,7 +101,6 @@ alias anime='~/Assets/ani-cli/ani-cli'
 alias convert='~/Scripts/img_converter.sh'
 alias cp='cp -rv'
 alias mv='mv -v'
-alias nvim='setsid neovide'
 alias rm='rm -riv'
 alias vpn='sudo protonvpn c'
 alias dvpn='sudo protonvpn d'
@@ -116,11 +115,16 @@ alias fetch='fm6000 -wally -c red -n -g 12 -l 16 --not-de'
 alias gg='git-graph --model simple'
 alias ggi='git-igitt --model simple'
 alias ll='npx live-server'
+alias tsrc='tmux source ~/.config/tmux/tmux.conf'
 alias lazytoken='cat ~/Documents/My_Docs/Passwords/LazyDev_token.txt'
 alias nyxtoken='cat ~/Documents/My_Docs/Passwords/SpaceNix_token.txt'
 alias passwords='cat ~/Documents/My_Docs/Passwords/Passwords.txt'
 alias run='ranger'
 alias neofetch='catnap'
+alias flutter-session="tmux attach-session -t Flutter"
+alias web-session="tmux attach-session -t Web"
+alias algorithms-session="tmux attach-session -t Algorithms"
+alias general-session="tmux attach-session -t General"
 
 
 

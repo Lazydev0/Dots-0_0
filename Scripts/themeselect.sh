@@ -57,7 +57,7 @@ if [[ -n "$SELECTION" ]]; then
 
   # Change wallpaper with transition
   swww img "$NEW_WALLPAPER" --transition-bezier .43,1.19,1,.4 --transition-fps 144 --transition-type grow --transition-duration 1 --transition-pos 0.680,1 &&
-    [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorify $BASENAME" -i "${ICONDIR}${BASENAME}" || dunstify "Gratify $BASENAME" -i "${ICONDIR}${BASENAME}"
+    [[ "$NEW_WALLPAPER" == "$HOME/Pictures/Colourful/"* ]] && dunstify "Colorize $BASENAME" -i "${ICONDIR}${BASENAME}" || dunstify "Grayscale $BASENAME" -i "${ICONDIR}${BASENAME}"
 
   # Save current wallpaper name
   echo "$BASENAME" >"$TRACKING_FILE"

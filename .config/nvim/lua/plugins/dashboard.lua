@@ -40,7 +40,6 @@ return {
             { icon = "  ", desc = "New File", action = "ene | startinsert", shortcut = "SPC c n" },
             { icon = "  ", desc = "Recent Files", action = "Telescope oldfiles", shortcut = "SPC f r" },
             { icon = "  ", desc = "Config", action = "edit $MYVIMRC", shortcut = "SPC c f" },
-            { icon = "󰒲  ", desc = "Lazy", action = "Lazy", shortcut = "SPC l z" },
             { icon = "  ", desc = "Quit", action = "qa", shortcut = "SPC q q" },
           },
         },

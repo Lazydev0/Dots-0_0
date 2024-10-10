@@ -18,3 +18,9 @@ vim.keymap.set("n", "<Tab>", [[<Cmd>bn<CR>]], { desc = "Next Buffer" })
 
 --insert 4 spaces
 vim.keymap.set("i", "<Tab>", [[<Cmd>execute "normal i    "<CR>]], { desc = "Insert 4 Spaces" })
+
+--Tmux
+vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { desc = "window left" })
+vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { desc = "window right" })
+vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { desc = "window down" })
+vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { desc = "window up" })
