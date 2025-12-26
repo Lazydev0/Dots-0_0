@@ -18,7 +18,7 @@
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Zen-Browser.png" alt="Zen" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Zen_Browser.png" alt="Zen" width="600"/>
    
   </div>
 
@@ -54,7 +54,7 @@
   </div>
 
  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/.config/rice/Obsidian.png" alt="Obsidian" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Obsidian.png" alt="Obsidian" width="600"/>
    
   </div>
 
