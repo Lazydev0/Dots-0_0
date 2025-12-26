@@ -1,0 +1,8 @@
+Pop|https://music.youtube.com/playlist?list=PLkg29FnBnhDRE9R9vrDXBdQFGpXQP6DSm
+Japanese|https://music.youtube.com/playlist?list=PLkg29FnBnhDT3t1aRdDYtE43NIso-YNfe
+Sturdy|https://music.youtube.com/playlist?list=PLkg29FnBnhDTCzmSTsWPCZU--xTCW_Pvo
+Instruments|https://music.youtube.com/playlist?list=PLkg29FnBnhDRifjivPDDTpL9Wo6GWIhPx
+Melody|https://music.youtube.com/playlist?list=PLkg29FnBnhDSInvoKQCg4ZajJk3WVfFcy
+Phonk|https://music.youtube.com/playlist?list=PLkg29FnBnhDRYOdMzeNIZPwT-Uaq5dhz8
+Bollywood|https://music.youtube.com/playlist?list=PLkg29FnBnhDT_MNNljsUJM_bZxN1529-S
+Gloomy|https://music.youtube.com/playlist?list=PLkg29FnBnhDQ3IDlLpOUVh_Y_EU0TpE6C

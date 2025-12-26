@@ -1,0 +1,12 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    ports:
+      - 8096:8096
+    volumes:
+      - /home/nyx/Jellyfin/config:/config
+      - /home/nyx/Jellyfin/cache:/cache
+      - /home/nyx/Jellyfin/media/Movies:/media/movies
+      - /home/nyx/Jellyfin/media/Shows:/media/shows
+    restart: unless-stopped

@@ -1,0 +1,137 @@
+/*****----- configuration -----*****/
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+/*****----- global properties -----*****/
+* {
+    font:                        "Noto Sans 11";
+    background:                  #11111b;
+    foreground:                  #eeeeee;
+    subtext:                     #9399b2;
+    selected:                    #eba0ac;
+    active:                      #b4befe;
+    urgent:                      #f38ba8;
+}
+
+/*****----- main window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    height:                      500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    border:                      2px;
+    border-color:                @active;
+    enabled:                     true;
+    border-radius:               0px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- main box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     80px 60px;
+    background-color:            transparent;
+    background-image: 		       url("/home/nyx/.cache/wall_cache/menu_icon/rofi.png",width);
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "dummy","entry", "dummy"];
+}
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       300px;
+    padding:                     16px 20px;
+    border-radius:               0px;
+    border:                      0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @subtext;
+    cursor:                      text;
+    placeholder:                 "Launch Apps  󱓞 ";
+    placeholder-color:           inherit;
+}
+dummy {
+    expand:                      true;
+    background-color:            transparent;
+}
+
+/*****----- listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       7;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     4px;
+    border-radius:               6;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element selected.normal {
+    background-color:            @background;
+    text-color:                  @active;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @background;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+

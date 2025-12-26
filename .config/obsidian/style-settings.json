@@ -1,0 +1,16 @@
+{
+  "anuppuccin-theme-settings@@anuppuccin-theme-light": "ctp-latte",
+  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-mauve",
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-mauve",
+  "anuppuccin-theme-settings@@ctp-custom-base@@dark": "#11111B",
+  "anuppuccin-theme-settings@@ctp-custom-base@@light": "#11111B",
+  "anuppuccin-theme-settings@@ctp-custom-mantle@@dark": "#11111B",
+  "anuppuccin-theme-settings@@ctp-custom-mantle@@light": "#11111B",
+  "anuppuccin-theme-settings@@ctp-custom-crust@@dark": "#151520",
+  "anuppuccin-theme-settings@@ctp-custom-crust@@light": "#11111B",
+  "anuppuccin-theme-settings@@anp-autohide-titlebar": true,
+  "anuppuccin-theme-settings@@anp-toggle-metadata": true,
+  "anuppuccin-theme-settings@@anp-toggle-scrollbars": true,
+  "anuppuccin-theme-settings@@anp-hide-status-bar": true,
+  "anuppuccin-theme-settings@@anp-tooltip-toggle": true
+}

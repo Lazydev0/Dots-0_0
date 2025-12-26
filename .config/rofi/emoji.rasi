@@ -1,0 +1,122 @@
+/*****----- Global Properties -----*****/
+* {
+    font:                        "Noto Sans 10.2";
+    background:                  #11111b;
+    foreground:                  #eeeeee;
+    selected:                    #eba0ac;
+    active:                      #b4befe;
+    subtext:                     #9399b2;
+    urgent:                      #f38ba8;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       420px;
+    height:                      500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    border:                      2px;
+    border-color:                @active;
+    enabled:                     true;
+    border-radius:               0px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     34px 20px 10px 20px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    expand:                      true;
+    width:                       100%;
+    padding:                     8px 12px;
+    border-radius:               0px;
+    border:                      0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @subtext;
+    cursor:                      text;
+    placeholder:                 "Type a feeling 🫠";
+    placeholder-color:           inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       7;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     8px;
+    padding:                     12px;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element.selected.normal {
+    background-color:            transparent;
+    text-color:                  @active;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
