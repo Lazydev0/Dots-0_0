@@ -13,54 +13,51 @@
 <div align="center">
 
 <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Hyprpanel.png" alt="Hyprpanel" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Terminals.png" alt="Terminals" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Terminals_1.png" alt="Terminals" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Zen-Browser.png" alt="Zen" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Neovim.png" alt="Neovim" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Btop.png" alt="Btop" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Obsidain.png" alt="Obsidian" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Discord.png" alt="Discord" width="600"/>
    
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Zfxtop.png" alt="Zfxtop" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Ncmpcpp.png" alt="Ncmpcpp" width="600"/>
     
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Zen-browser.png" alt="Zen-browser" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Menu.png" alt="Menu" width="600"/>
  
   </div>
 
   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Zen-catppuccin.png" alt="Zen-catppuccin" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Wall_Menu.png" alt="Wall_Menu" width="600"/>
   
   </div>
 
 
  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/rofi-menu.png" alt="Menu" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Tmux.png" alt="Tmux" width="600"/>
    
   </div>
 
  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/rofi-wallselect.png" alt="Wallselect" width="600"/>
+    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/.config/rice/Obsidian.png" alt="Obsidian" width="600"/>
    
   </div>
 
-   <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/Pictures/Extras/Rice/Ncmpcpp.png" alt="ncmpcpp" width="600"/>
-   
-  </div>
+  
 </div>
 
