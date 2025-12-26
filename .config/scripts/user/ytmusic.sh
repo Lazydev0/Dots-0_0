@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR="$HOME/.config/scripts/ytmusic"
+BASE_DIR="$HOME/.config/scripts/user/"
 MUSIC_DIR="$HOME/Music"
 
 COOKIES="$BASE_DIR/cookies.txt"
