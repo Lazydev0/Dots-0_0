@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=lftp
+Icon=estmob-sendanywhere
+Type=Application
+Terminal=false
+Exec=kitty --title kitten -e lftp
+Categories=Network;FileTransfer;

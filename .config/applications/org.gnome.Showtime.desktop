@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Video Player
+Exec=showtime %U
+Icon=kawaii-player
+Categories=AudioVideo;Video;Player;
+Terminal=false
+StartupNotify=true
+

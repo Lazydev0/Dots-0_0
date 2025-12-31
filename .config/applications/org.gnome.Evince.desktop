@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Document Viewer
+Comment=View PDF and other documents
+Exec=evince %U
+TryExec=evince
+Icon=com.github.mdh34.quickdocs
+Terminal=false
+Type=Application
+Categories=Office;Viewer;
+MimeType=application/pdf;
