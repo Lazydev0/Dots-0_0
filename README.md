@@ -1,12 +1,12 @@
 <div align="center">
- <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/Pictures/Extras/Rice/kirby-rice.gif" alt="Logo" height="auto" width ="auto">
+ <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/banner.png" alt="Logo" height="auto" width ="auto">
 </div>
 
 # <div align="center"> Dots-0_0</div>
 
-
-<div align="center">A simple rice made with hyprland and catppucccin colors</div>
-
+<div align="center">
+  <h2>My Hyprland Rice</h2>
+</div>
 
 
 ## <div align="center"> Screenshots</div>
