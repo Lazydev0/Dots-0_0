@@ -1,8 +1,12 @@
 <div align="center">
- <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/banner.png" alt="Logo" height="auto" width ="auto">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/banner.png" alt="Dots-0_0 Banner">
 </div>
 
-# <div align="center"> Dots-0_0</div>
+<br>
+
+# <div align="center">Dots-0_0</div>
+
+### <div align="center">A Simple, Clean Rice Built on Hyprland</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Arch-fab387?style=for-the-badge">
@@ -13,56 +17,16 @@
   <img src="https://img.shields.io/badge/Kitty-f5e0dc?style=for-the-badge">
 </p>
 
-## <div align="center"> Screenshots</div>
+## <div align="center">Screenshots</div>
 
 <div align="center">
-
-<div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Terminals.png" alt="Terminals" width="600"/>
-   
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Zen_Browser.png" alt="Zen" width="600"/>
-   
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Btop.png" alt="Btop" width="600"/>
-   
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Discord.png" alt="Discord" width="600"/>
-   
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Ncmpcpp.png" alt="Ncmpcpp" width="600"/>
-    
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Menu.png" alt="Menu" width="600"/>
- 
-  </div>
-
-  <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Wall_Menu.png" alt="Wall_Menu" width="600"/>
-  
-  </div>
-
-
- <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Tmux.png" alt="Tmux" width="600"/>
-   
-  </div>
-
- <div>
-    <img src="https://github.com/Lazydev0/Dots-0_0/blob/trunk/.config/rice/Obsidian.png" alt="Obsidian" width="600"/>
-   
-  </div>
-
-  
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Terminals.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Zen_Browser.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Btop.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Discord.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Ncmpcpp.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Menu.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Wall_Menu.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Tmux.png" width="600">
+  <img src="https://raw.githubusercontent.com/Lazydev0/Dots-0_0/trunk/.config/rice/Obsidian.png" width="600">
 </div>
-
