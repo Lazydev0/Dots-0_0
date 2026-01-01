@@ -4,12 +4,17 @@
 
 # <div align="center"> Dots-0_0</div>
 
-<div align="center">
-  <h2>My Hyprland Rice</h2>
-</div>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Arch-fab387?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Hyprland-b4befe?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Catppuccin-f5c2e7?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Hyprpanel-a6e3a1?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Rofi-f9e2af?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Kitty-f5e0dc?style=for-the-badge">
+</p>
 
 ## <div align="center"> Screenshots</div>
+
 <div align="center">
 
 <div>
