@@ -25,4 +25,4 @@ done
 
 echo "$RANDPATTERN" >"$PREV_PATTERN_FILE"
 
-viu -h 20 "$RANDPATTERN"
+kitty +kitten icat --use-window-size 30,12,350,168 "$RANDPATTERN"

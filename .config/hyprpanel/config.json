@@ -139,7 +139,7 @@
   "theme.bar.buttons.modules.power.icon": "#11111b",
   "theme.bar.buttons.modules.power.icon_background": "#ff9e67",
   "theme.bar.buttons.modules.power.background": "#ff9e67",
-  "menus.power.showLabel": false,
+  "menus.power.showLabel": true,
   "menus.power.lowBatteryNotification": true,
   "theme.bar.buttons.dashboard.background": "#b6f9f5",
   "theme.bar.buttons.dashboard.icon": "#11111b",
@@ -202,5 +202,6 @@
   "bar.customModules.updates.autoHide": false,
   "bar.customModules.updates.updateTooltipCommand": "$HOME/.config/scripts/user/checkUpdates.sh",
   "bar.customModules.updates.updateCommand": "$HOME/.config/scripts/user/checkUpdates.sh",
-  "theme.bar.menus.menu.dashboard.profile.size": "11em"
+  "theme.bar.menus.menu.dashboard.profile.size": "11em",
+  "menus.power.sleep": "hyprlock"
 }
