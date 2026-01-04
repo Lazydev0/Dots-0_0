@@ -200,8 +200,8 @@
   "menus.dashboard.powermenu.confirmation": true,
   "bar.customModules.updates.extendedTooltip": false,
   "bar.customModules.updates.autoHide": false,
-  "bar.customModules.updates.updateTooltipCommand": "$HOME/.config/scripts/user/checkUpdates.sh",
-  "bar.customModules.updates.updateCommand": "$HOME/.config/scripts/user/checkUpdates.sh",
+  "bar.customModules.updates.updateTooltipCommand": "/usr/share/hyprpanel/scripts/checkUpdates.sh -arch -tooltip",
+  "bar.customModules.updates.updateCommand": "/usr/share/hyprpanel/scripts/checkUpdates.sh -arch",
   "theme.bar.menus.menu.dashboard.profile.size": "11em",
   "menus.power.sleep": "hyprlock"
 }

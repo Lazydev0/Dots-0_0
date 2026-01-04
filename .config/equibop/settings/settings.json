@@ -339,9 +339,6 @@
         "OnePingPerDM": {
             "enabled": true
         },
-        "Oneko": {
-            "enabled": false
-        },
         "OpenInApp": {
             "enabled": false
         },
@@ -1200,6 +1197,9 @@
         },
         "ElementHighlighter": {
             "enabled": false
+        },
+        "CursorBuddy": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1217,7 +1217,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1766154463545
+        "settingsSyncVersion": 1767510275360
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
