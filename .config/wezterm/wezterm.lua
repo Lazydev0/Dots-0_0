@@ -6,6 +6,8 @@ return {
 	font_size = 11,
 	line_height = 1,
 
+	default_cursor_style = "SteadyBar",
+	window_close_confirmation = "NeverPrompt",
 	window_background_opacity = 1.0,
 	text_background_opacity = 1.0,
 	enable_scroll_bar = false,
