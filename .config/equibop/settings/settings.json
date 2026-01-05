@@ -129,7 +129,7 @@
             "enabled": false
         },
         "ClientTheme": {
-            "enabled": false,
+            "enabled": true,
             "color": "11111b"
         },
         "ColorSighted": {
@@ -1244,7 +1244,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1767608080287
+        "settingsSyncVersion": 1767623287867
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
