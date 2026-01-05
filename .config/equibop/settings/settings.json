@@ -39,7 +39,7 @@
             "enabled": false
         },
         "MessageEventsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessagePopoverAPI": {
             "enabled": false
@@ -157,7 +157,9 @@
             "enabled": true
         },
         "CtrlEnterSend": {
-            "enabled": true
+            "enabled": true,
+            "submitRule": "ctrl+enter",
+            "sendMessageInTheMiddleOfACodeBlock": true
         },
         "CustomIdle": {
             "enabled": false
@@ -187,7 +189,19 @@
             "enabled": false
         },
         "FakeNitro": {
-            "enabled": false
+            "enabled": true,
+            "enableEmojiBypass": true,
+            "emojiSize": 48,
+            "transformEmojis": true,
+            "enableStickerBypass": true,
+            "stickerSize": 160,
+            "transformStickers": true,
+            "transformCompoundSentence": false,
+            "enableStreamQualityBypass": true,
+            "useStickerHyperLinks": true,
+            "useEmojiHyperLinks": true,
+            "hyperLinkText": "{{NAME}}",
+            "disableEmbedPermissionCheck": false
         },
         "FakeProfileThemes": {
             "enabled": true,
@@ -338,7 +352,12 @@
             "enabled": false
         },
         "OnePingPerDM": {
-            "enabled": true
+            "enabled": true,
+            "ignoreUsers": "",
+            "channelToAffect": "both_dms",
+            "allowMentions": false,
+            "allowEveryone": false,
+            "alwaysPlaySound": false
         },
         "OpenInApp": {
             "enabled": false
@@ -1225,7 +1244,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1767603471491
+        "settingsSyncVersion": 1767608080287
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

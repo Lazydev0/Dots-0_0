@@ -9,12 +9,12 @@ body {
     --radius-xl: 0px; 
 
     /* fonts */
-    --font: 'Figtree';
-    --code-font: 'JetBrains Mono';
+    --font: 'Noto Sans';
+    --code-font: 'FiraCode Nerd Font';
     font-weight: 400;
   
     /* spacing */
-    --gap: 12px;
+    --gap: 10px;
     --divider-thickness: 4px;
     --border-thickness: 1px;
 
@@ -35,12 +35,8 @@ body {
     --window-control-size: 14px;
 
     /* dms button */
-    --custom-dms-icon: custom;
-    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
-    --dms-icon-svg-size: 90%;
-    --dms-icon-color-before: var(--text-4);
-    --dms-icon-color-after: var(--accent-2);
-    --custom-dms-background: off;
+
+    --custom-dms-icon: off;
 
     /* background / blur */
     --background-image: off;
@@ -57,11 +53,6 @@ body {
     /* misc */
     --small-user-panel: on;
 }
-
-/* =====================================================
-   CATPPUCCIN MOCHA — DARKER VARIANT
-   Base: #11111b
-   ===================================================== */
 
 :root {
     --colors: on;
@@ -89,9 +80,8 @@ body {
     /* accents */
     --accent-1: #89b4fa; /* blue */
     --accent-2: #b4befe; /* lavender */
-    --accent-3: #74c7ec; /* sapphire */
+    --accent-3: #f5c2e7; /* sapphire */
     --accent-4: #cba6f7; /* mauve */
-    --accent-5: #f5c2e7; /* pink */
     --accent-new: #f38ba8; /* red */
 
     /* mentions / replies */
