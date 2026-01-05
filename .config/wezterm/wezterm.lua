@@ -2,7 +2,10 @@ local wezterm = require("wezterm")
 
 return {
 
-	font = wezterm.font("FiraCode Nerd Font"),
+	font = wezterm.font({
+		family = "FiraCode Nerd Font",
+		weight = "Medium",
+	}),
 	font_size = 11,
 	line_height = 1,
 
@@ -14,8 +17,8 @@ return {
 	window_padding = {
 		left = 20,
 		right = 20,
-		top = 10,
-		bottom = 10,
+		top = 14,
+		bottom = 14,
 	},
 	adjust_window_size_when_changing_font_size = false,
 

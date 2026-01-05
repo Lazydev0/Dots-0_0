@@ -25,4 +25,4 @@ done
 
 echo "$RANDPATTERN" >"$PREV_PATTERN_FILE"
 
-kitty +kitten icat --use-window-size 30,12,350,168 "$RANDPATTERN"
+wezterm imgcat --width 40 --height 15 "$RANDPATTERN"

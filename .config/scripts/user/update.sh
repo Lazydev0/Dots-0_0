@@ -1,3 +1,5 @@
 #!/bin/bash
 
-uwsm app -- kitty --title kitten -e sh -c 'yay -Syu && exec $SHELL'
+dropTerm="wezterm start --class dropTerm"
+
+uwsm app -- $dropTerm -e sh -c 'yay -Syu && exec $SHELL'

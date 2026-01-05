@@ -6,7 +6,8 @@
     "eagerPatches": false,
     "enabledThemes": [
         "system24-catppuccin-mocha.theme.css",
-        "system24-catppuccin-dark.theme.css"
+        "nocturnal_circle.theme.css",
+        "midnight.theme.css"
     ],
     "enabledThemeLinks": [],
     "enableOnlineThemes": true,
@@ -1177,7 +1178,8 @@
             "disableDMContextMenu": false,
             "noMirroredCamera": false,
             "removeActivitySection": false,
-            "showYourOwnActivityButtons": false
+            "showYourOwnActivityButtons": false,
+            "noDefaultHangStatus": false
         },
         "Settings": {
             "enabled": true,
@@ -1200,6 +1202,12 @@
         },
         "CursorBuddy": {
             "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
+        },
+        "MicLoopbackTester": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1217,7 +1225,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1767510275360
+        "settingsSyncVersion": 1767603471491
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

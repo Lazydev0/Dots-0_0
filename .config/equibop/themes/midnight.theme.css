@@ -1,0 +1,132 @@
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+
+    --radius-xs: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+    --radius-xl: 0px; 
+
+    /* fonts */
+    --font: 'Figtree';
+    --code-font: 'JetBrains Mono';
+    font-weight: 400;
+  
+    /* spacing */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    /* animations */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: on;
+
+    /* window controls */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button */
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--text-4);
+    --dms-icon-color-after: var(--accent-2);
+    --custom-dms-background: off;
+
+    /* background / blur */
+    --background-image: off;
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* chat bar */
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+
+    /* misc */
+    --small-user-panel: on;
+}
+
+/* =====================================================
+   CATPPUCCIN MOCHA — DARKER VARIANT
+   Base: #11111b
+   ===================================================== */
+
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: #11111b; /* base */
+    --text-1: #cdd6f4; /* text */
+    --text-2: #bac2de; /* subtext0 */
+    --text-3: #a6adc8; /* subtext1 */
+    --text-4: #7f849c; /* overlay2 */
+    --text-5: #6c7086; /* overlay1 */
+
+    /* backgrounds (proper Catppuccin layering) */
+    --bg-1: #313244; /* surface2 */
+    --bg-2: #1e1e2e; /* surface1 */
+    --bg-3: #11111b; /* base */
+    --bg-4: #0b0b14; /* crust (darker than stock) */
+
+    /* interaction states */
+    --hover: rgba(180, 190, 254, 0.06);
+    --active: rgba(180, 190, 254, 0.14);
+    --active-2: rgba(180, 190, 254, 0.22);
+    --message-hover: rgba(0, 0, 0, 0.22);
+
+    /* accents */
+    --accent-1: #89b4fa; /* blue */
+    --accent-2: #b4befe; /* lavender */
+    --accent-3: #74c7ec; /* sapphire */
+    --accent-4: #cba6f7; /* mauve */
+    --accent-5: #f5c2e7; /* pink */
+    --accent-new: #f38ba8; /* red */
+
+    /* mentions / replies */
+    --mention: linear-gradient(
+        to right,
+        rgba(180, 190, 254, 0.22) 40%,
+        transparent
+    );
+    --mention-hover: linear-gradient(
+        to right,
+        rgba(180, 190, 254, 0.32) 40%,
+        transparent
+    );
+
+    --reply: linear-gradient(
+        to right,
+        rgba(166, 173, 200, 0.22) 40%,
+        transparent
+    );
+    --reply-hover: linear-gradient(
+        to right,
+        rgba(166, 173, 200, 0.32) 40%,
+        transparent
+    );
+
+    /* status colors */
+    --online: #a6e3a1;
+    --idle: #f9e2af;
+    --dnd: #f38ba8;
+    --streaming: #cba6f7;
+    --offline: #6c7086;
+
+    /* borders */
+    --border-light: rgba(205, 214, 244, 0.05);
+    --border: rgba(205, 214, 244, 0.1);
+    --border-hover: rgba(180, 190, 254, 0.3);
+    --button-border: rgba(205, 214, 244, 0.08);
+}
