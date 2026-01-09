@@ -157,7 +157,7 @@
             "enabled": true
         },
         "CtrlEnterSend": {
-            "enabled": true,
+            "enabled": false,
             "submitRule": "ctrl+enter",
             "sendMessageInTheMiddleOfACodeBlock": true
         },
@@ -384,7 +384,8 @@
             "enabled": true,
             "canCollapseDmSection": false,
             "userBasedCategoryList": {
-                "1004921352022659082": []
+                "1004921352022659082": [],
+                "1459242712594256027": []
             },
             "pinOrder": 0
         },
@@ -589,7 +590,8 @@
             "serverBoost": true,
             "billing": true,
             "gift": true,
-            "emojiList": true
+            "emojiList": true,
+            "quests": false
         },
         "Animalese": {
             "enabled": false
@@ -1198,7 +1200,8 @@
             "noMirroredCamera": false,
             "removeActivitySection": false,
             "showYourOwnActivityButtons": false,
-            "noDefaultHangStatus": false
+            "noDefaultHangStatus": false,
+            "forceRoleIcon": false
         },
         "Settings": {
             "enabled": true,
@@ -1227,6 +1230,9 @@
         },
         "MicLoopbackTester": {
             "enabled": false
+        },
+        "DragFavoriteEmotes": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1244,7 +1250,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1767949399967
+        "settingsSyncVersion": 1767982270364
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

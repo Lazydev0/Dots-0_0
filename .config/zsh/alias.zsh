@@ -12,6 +12,7 @@ alias bonsai='cbonsai'
 alias clock='tty-clock -c -C 4 -B'
 alias tsrc='source $HOME/.config/tmux/tmux.conf'
 alias grep='rg'
+alias io='caligula'
 alias img='kitty +kitten icat'
 alias fetch='fm6000 -wally -c yellow -n -g 12 -l 16 --not-de'
 

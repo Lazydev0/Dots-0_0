@@ -4,6 +4,8 @@ dir="$HOME/.config/rofi/"
 theme='emoji'
 
 ## Run
-rofi \
-  -show emoji \
-  -theme ${dir}/${theme}.rasi
+rofimoji \
+  --selector rofi \
+  --max-recent 0 \
+  --no-frecency \
+  --selector-args "-theme ${dir}/${theme}.rasi"
