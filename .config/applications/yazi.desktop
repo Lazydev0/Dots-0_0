@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Yazi
+Comment=Blazing fast terminal file manager written in Rust
+Icon=yazi
+Type=Application
+Terminal=false
+Exec=wezterm start --class dropTerm yazi
+TryExec=yazi
+MimeType=inode/directory;
+Categories=Utility;System;FileManager;
+Keywords=File;Manager;Explorer;Browser;
+
