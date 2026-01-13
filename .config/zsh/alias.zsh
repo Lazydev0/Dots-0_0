@@ -1,5 +1,4 @@
 # Essentials
-alias sudo='doas'
 alias ip='ip -color'
 alias neofetch='catnap'
 alias ping='ping -c 5'
