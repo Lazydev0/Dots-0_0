@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "910e4c3b863577cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "81daea871bde71c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8268ea4dfbef2e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Linux_essentials/12. Debugging.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "12. Debugging"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "97907d05061f7e73",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c6c900c8ef41627",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e72809206aea8a2b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8247a1243862ac72",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "84dadb7a1fa1ccca",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 270.5
+  },
+  "right": {
+    "id": "5bbd38d507606e4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "3360142d52bb03b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6fa2a68a70680568",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Gate/Operating Systems/0. Introduction.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 0. Introduction"
+            }
+          },
+          {
+            "id": "e99c910bbc6997fd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Gate/Operating Systems/0. Introduction.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 0. Introduction"
+            }
+          },
+          {
+            "id": "1839c01328b4059a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "64ac362acbdb8bbb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "bab9c705590fb92a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Gate/Operating Systems/0. Introduction.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 0. Introduction"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b8268ea4dfbef2e0",
+  "lastOpenFiles": [
+    "Linux/Linux_essentials/1. Theory.md",
+    "Linux/Linux_essentials/12. Debugging.md",
+    "Linux/Linux_essentials/9. Tmux.md",
+    "Linux/Linux_essentials/6. System Monitoring.md",
+    "Linux/Linux_essentials/4. Viewing and Editing.md",
+    "Linux/Linux_essentials/3. File Operations.md",
+    "Linux/Linux_essentials/2. Basic Commands.md",
+    "Linux/Linux_essentials/11. LFTP.md",
+    "Linux/Linux_essentials/10. Yazi.md",
+    "Linux/Linux_essentials/8. Neovim.md",
+    "Linux/Linux_essentials/7. Miscellaneous.md",
+    "Linux/Linux_essentials/5. Data Manipulation.md",
+    "Linux/Linux_essentials/1. Theory.html",
+    "Gate/Operating Systems/0. Introduction.md",
+    "Gate/Aptitude/Clocks and Calendars.md",
+    "Programming/C/2. Variables.md",
+    "Programming/C/1. Introduction.md",
+    "Programming/C/0. Miscellaneous.md",
+    "Web/Javascript/Introduction.md",
+    "README.md",
+    "Gate/Aptitude/Clocks and Calendars.md~",
+    "Programming/Rust/2. Variables.md",
+    "Programming/Rust/0. Miscellaneous.md",
+    "Programming/Rust/1. Introduction.md",
+    "Devops/Profile.md",
+    "Devops/Git and Github/1. Introduction.md",
+    "Devops/Git and Github/2. Commands.md"
+  ]
+}

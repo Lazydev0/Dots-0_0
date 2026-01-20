@@ -10,7 +10,7 @@ configuration {
     background:                  #11111b;
     foreground:                  #eeeeee;
     selected:                    #eba0ac;
-    active:                      #BD93F9;
+    active:                      #b4befe;
     urgent:                      #f38ba8;
 }
 

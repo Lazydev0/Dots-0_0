@@ -1,0 +1,9 @@
+{
+  "cssTheme": "Tokyo Night",
+  "theme": "obsidian",
+  "showRibbon": false,
+  "monospaceFontFamily": "Courier New",
+  "showViewHeader": false,
+  "accentColor": "#d2c1fb",
+  "nativeMenus": false
+}

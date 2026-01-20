@@ -2,4 +2,4 @@
 
 dropTerm="wezterm start --class dropTerm"
 
-uwsm app -- $dropTerm sh -c 'paru -Syu && exec $SHELL'
+uwsm app -- $dropTerm sh -c 'yay -Syu && exec $SHELL'

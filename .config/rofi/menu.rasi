@@ -9,7 +9,7 @@ configuration {
 /*****----- global properties -----*****/
 * {
     font:                        "Noto Sans 11";
-    background:                  #11111b;
+    background:                  #11111bE4;
     foreground:                  #eeeeee;
     subtext:                     #9399b2;
     selected:                    #eba0ac;
@@ -112,7 +112,7 @@ element {
     cursor:                      pointer;
 }
 element selected.normal {
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @active;
 }
 element selected.urgent {

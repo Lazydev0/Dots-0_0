@@ -1,7 +1,7 @@
 /*****----- Global Properties -----*****/
 * {
     font:                        "Noto Sans 10.2";
-    background:                  #11111b;
+    background:                  #11111be4;
     foreground:                  #eeeeee;
     selected:                    #eba0ac;
     active:                      #b4befe;
@@ -50,7 +50,7 @@ inputbar {
     enabled:                     true;
     spacing:                     0px;
     padding:                     34px 20px 10px 20px;
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "entry" ];
@@ -64,7 +64,7 @@ entry {
     border-radius:               0px;
     border:                      0px;
     border-color:                @selected;
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @subtext;
     cursor:                      text;
     placeholder:                 "Type a feeling 🫠";
@@ -74,7 +74,7 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     2;
+    columns:                     1;
     lines:                       7;
     cycle:                       true;
     dynamic:                     true;
