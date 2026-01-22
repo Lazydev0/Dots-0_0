@@ -1,23 +1,29 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Noto Sans 10.2";
-    background:                  #11111be4;
+    font:                        "Noto Sans 11";
+    background:                  #11111bE4;
+    background-alt:              #11111bE4;
     foreground:                  #eeeeee;
+    subtext:                     #9399b2;
     selected:                    #eba0ac;
     active:                      #b4befe;
-    subtext:                     #9399b2;
     urgent:                      #f38ba8;
 }
 
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
+    location:                    west;
+    anchor:                      west;
     fullscreen:                  false;
-    width:                       420px;
-    height:                      500px;
-    x-offset:                    0px;
+    width:                       400px;
+    height:                      50%;
+    x-offset:                    8px;
     y-offset:                    0px;
     border:                      2px;
     border-color:                @active;
@@ -33,9 +39,10 @@ mainbox {
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
+    children:                    [ "inputbar", "listbox"];
 }
 
+/*****----- List Box -----*****/
 listbox {
     spacing:                     20px;
     padding:                     20px;
@@ -44,34 +51,41 @@ listbox {
     children:                    [ "message", "listview" ];
 }
 
-
-/*****----- Inputbar -----*****/
+/*****----- Input Bar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     0px;
-    padding:                     34px 20px 10px 20px;
+    padding:                     10px 10px 0px;
     background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
-    children:                    [ "entry" ];
+    children:                    ["entry" ];
 }
 
 entry {
     enabled:                     true;
     expand:                      true;
-    width:                       100%;
-    padding:                     8px 12px;
-    border-radius:               0px;
+    padding:                     16px 20px;
     border:                      0px;
-    border-color:                @selected;
-    background-color:            transparent;
+    background-color:            @background;
     text-color:                  @subtext;
     cursor:                      text;
-    placeholder:                 "Type a feeling 🫠";
+    placeholder:                 "Yank Emojis 🦄";
     placeholder-color:           inherit;
 }
 
-/*****----- Listview -----*****/
+button {
+    padding:                     12px;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+
+button selected {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+/*****----- List View -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
@@ -92,17 +106,36 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     8px;
-    padding:                     12px;
-    border-radius:               0px;
+    spacing:                     10px;
+    padding:                     8px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 
-element.selected.normal {
-    background-color:            transparent;
-    text-color:                  @active;
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+element normal.active {
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @background;
+}
+
+element selected.normal {
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @background;
 }
 
 element-icon {
@@ -120,3 +153,19 @@ element-text {
     horizontal-align:            0.0;
 }
 
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+
+textbox {
+    padding:                     12px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+error-message {
+    padding:                     12px;
+    background-color:            @background;
+    text-color:                  @urgent;
+}

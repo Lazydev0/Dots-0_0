@@ -31,10 +31,12 @@
     --accent-4: #cba6f7;
     --accent-new: #f38ba8;
 
-    --mention: rgba(180, 190, 254, 0.22);
-    --mention-hover: rgba(180, 190, 254, 0.32);
-    --reply: rgba(166, 173, 200, 0.22);
-    --reply-hover: rgba(166, 173, 200, 0.32);
+
+    --mention: rgba(24, 24, 37, 0.42);
+    --mention-hover: rgba(24, 24, 37, 0.55);
+    --reply: rgba(30, 30, 46, 0.38);
+    --reply-hover: rgba(30, 30, 46, 0.52);
+
 
     --online: #a6e3a1;
     --idle: #f9e2af;
