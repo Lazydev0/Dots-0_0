@@ -13,11 +13,6 @@ use = "Reledia/glow"
 rev = "bd3eaa5"
 hash = "92b5c58159a51c567f82b618cee2b78"
 
-[[plugin.deps]]
-use = "macydnah/office"
-rev = "41ebef8"
-hash = "5805affd3ae8adcb3c72b6997d21c0a6"
-
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "ca61658"
