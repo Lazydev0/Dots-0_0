@@ -1,4 +1,5 @@
 # Essentials
+alias sudo="doas"
 alias ip='ip -color'
 alias neofetch='catnap'
 alias ping='ping -c 5'
@@ -18,10 +19,8 @@ alias fetch='fm6000 -wally -c yellow -n -g 12 -l 16 --not-de'
 # User Aliases
 alias paclock='sudo fuser -v /var/lib/pacman/db.lck || sudo rm -f /var/lib/pacman/db.lck'
 alias kill_orphans='sudo pacman -Rns $(pacman -Qdtq || true)'
-alias kill_pkgcache='sudo paccache -r -k 2'
-alias kill_aurcache='yay -Sc --noconfirm'
+alias kill_pkgcache='sudo pacman -Scc'
 alias kill_journal='sudo journalctl --vacuum-size=100M'
-alias kill_tmp='sudo systemd-tmpfiles --clean'
 alias kill_wallcache='rm -rf ~/.cache/wall_cache/wallselect_icons/'
 alias kill_screenshots='rm -rf "$HOME/Pictures/Screenshots/"*'
 alias gg='git-graph --model simple'

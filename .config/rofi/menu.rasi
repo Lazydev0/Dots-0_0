@@ -1,18 +1,15 @@
-/*****----- Configuration -----*****/
+/*****----- configuration -----*****/
 configuration {
-    modi:                       "drun,filebrowser";
+    modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "";
-    display-filebrowser:        "";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
 }
 
-/*****----- Global Properties -----*****/
+/*****----- global properties -----*****/
 * {
     font:                        "Noto Sans 11";
     background:                  #11111bE4;
-    background-alt:              #11111bE4;
     foreground:                  #eeeeee;
     subtext:                     #9399b2;
     selected:                    #eba0ac;
@@ -20,15 +17,15 @@ configuration {
     urgent:                      #f38ba8;
 }
 
-/*****----- Main Window -----*****/
+/*****----- main window -----*****/
 window {
     transparency:                "real";
-    location:                    west;
-    anchor:                      west;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    height:                      98.5%;
-    x-offset:                    8px;
+    width:                       800px;
+    height:                      500px;
+    x-offset:                    0px;
     y-offset:                    0px;
     border:                      2px;
     border-color:                @active;
@@ -38,16 +35,15 @@ window {
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
+/*****----- main box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "inputbar", "listbox", "mode-switcher" ];
+    children:                    [ "inputbar", "listbox" ];
 }
 
-/*****----- List Box -----*****/
 listbox {
     spacing:                     20px;
     padding:                     20px;
@@ -56,56 +52,41 @@ listbox {
     children:                    [ "message", "listview" ];
 }
 
-/*****----- Input Bar -----*****/
+/*****----- inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     80px 60px 160px;
+    padding:                     80px 60px;
     background-color:            transparent;
-    background-image:            url("/home/nyx/.cache/wall_cache/menu_icon/rofi.png", width);
+    background-image: 		       url("/home/nyx/.cache/wall_cache/menu_icon/rofi.png",width);
     text-color:                  @foreground;
     orientation:                 horizontal;
-    children:                    ["entry" ];
+    children:                    [ "dummy","entry", "dummy"];
 }
-
 entry {
     enabled:                     true;
-    expand:                      true;
+    expand:                      false;
+    width:                       300px;
     padding:                     16px 20px;
+    border-radius:               0px;
     border:                      0px;
+    border-color:                @selected;
     background-color:            @background;
     text-color:                  @subtext;
     cursor:                      text;
     placeholder:                 "Launch Apps  󱓞 ";
     placeholder-color:           inherit;
 }
-
-/*****----- Mode Switcher -----*****/
-mode-switcher {
-    enabled:                     true;
-    padding:                     15px;
-    spacing:                     10px;
+dummy {
+    expand:                      true;
     background-color:            transparent;
-    text-color:                  @foreground;
 }
 
-button {
-    padding:                     12px;
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      pointer;
-}
-
-button selected {
-    background-color:            @selected;
-    text-color:                  @background;
-}
-
-/*****----- List View -----*****/
+/*****----- listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       10;
+    columns:                     3;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -113,42 +94,27 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
+    
     spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
+/*****----- elements -----*****/
 element {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     8px;
+    padding:                     4px;
+    border-radius:               6;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
-
-element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-
-element normal.active {
-    background-color:            @active;
-    text-color:                  @background;
-}
-
-element normal.urgent {
-    background-color:            @urgent;
-    text-color:                  @background;
-}
-
 element selected.normal {
-    background-color:            @active;
-    text-color:                  @background;
+    background-color:            transparent;
+    text-color:                  @active;
 }
-
 element selected.urgent {
     background-color:            @urgent;
     text-color:                  @background;
@@ -160,7 +126,6 @@ element-icon {
     size:                        32px;
     cursor:                      inherit;
 }
-
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -169,19 +134,4 @@ element-text {
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
-message {
-    background-color:            transparent;
-}
 
-textbox {
-    padding:                     12px;
-    background-color:            @background;
-    text-color:                  @foreground;
-}
-
-error-message {
-    padding:                     12px;
-    background-color:            @background;
-    text-color:                  @urgent;
-}

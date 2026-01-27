@@ -1,0 +1,49 @@
+[opener]
+
+nvim = [
+  { run = "nvim \"$@\"", block = true }
+]
+
+image = [
+  { run = "eog -- \"$@\"" }
+]
+
+pdf = [
+  { run = "evince -- \"$@\"" }
+]
+
+audio = [
+  { run = "ncmpcpp", block = true }
+]
+
+video = [
+  { run = "showtime \"$@\"" }
+]
+
+trash = [
+  { run = "mkdir -p ~/.trash && mv -- \"$@\" ~/.trash" }
+]
+
+epub = [
+  { run = "lue \"$@\"", block = true }
+]
+
+open = [
+  { run = "mimeopen \"$@\"" }
+]
+
+[open]
+rules = [
+  { mime = "text/*", use = "nvim" },
+  { ext = "xml,json,csv,tex,py,pl,rb,js,sh,php", use = "nvim" },
+  { ext = "html,htm,xhtml", use = "nvim" },
+  { mime = "image/*", use = "image" },
+  { mime = "application/pdf", use = "pdf" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "video/*", use = "video" },
+  { mime = "*", use = "open" }
+]
+
+[[manager.prepend_keymap]]
+on = ["d"]
+run = "shell --confirm 'mkdir -p ~/.trash && mv -- \"$@\" ~/.trash'"

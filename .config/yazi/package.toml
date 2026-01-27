@@ -1,0 +1,24 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "e07bf41"
+hash = "563e4068979d1466d3dfc2e70a296947"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "594b8a2"
+hash = "c9e628fc0312d198db22ae2fa74883b"
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "bd3eaa5"
+hash = "92b5c58159a51c567f82b618cee2b78"
+
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "41ebef8"
+hash = "5805affd3ae8adcb3c72b6997d21c0a6"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "ca61658"
+hash = "8eabb4e88096f10905a6df62cfaadbf4"
