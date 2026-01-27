@@ -1,23 +1,25 @@
-stack_file="/tmp/hide_window_pid_stack.txt"
+stack_file="/tmp/hide_window_addr_stack.txt"
+touch "$stack_file"
 
-function hide_window() {
-  pid=$(hyprctl activewindow -j | jq '.pid')
-  hyprctl dispatch movetoworkspacesilent 88,pid:$pid
-  echo $pid >>$stack_file
+hide_window() {
+  addr=$(hyprctl activewindow -j | jq -r '.address')
+  [ -z "$addr" ] && exit 1
+
+  hyprctl dispatch movetoworkspacesilent 88,address:$addr
+  echo "$addr" >>"$stack_file"
 }
 
-function show_window() {
-  pid=$(tail -1 $stack_file && sed -i '$d' $stack_file)
-  [ -z $pid ] && exit
+show_window() {
+  [ ! -s "$stack_file" ] && exit 0
 
-  current_workspace=$(hyprctl activeworkspace -j | jq '.id')
-  hyprctl dispatch movetoworkspacesilent $current_workspace,pid:$pid
+  addr=$(tail -n 1 "$stack_file")
+  sed -i '$d' "$stack_file"
+
+  ws=$(hyprctl activeworkspace -j | jq -r '.id')
+  hyprctl dispatch movetoworkspacesilent "$ws",address:$addr
 }
 
-if [ ! -z $1 ]; then
-  if [ "$1" == "h" ]; then
-    hide_window >>/dev/null
-  else
-    show_window >>/dev/null
-  fi
-fi
+case "$1" in
+h) hide_window ;;
+s) show_window ;;
+esac
