@@ -25,6 +25,5 @@ if ! command -v "grimblast" &>/dev/null; then
 fi
 
 grimblast copysave screen "$FILE" && \
-notify-send "Screenshot captured" "Saved to: $FILE" -i "$FILE" && \
-satty --filename "$FILE" &
+notify-send "Screenshot captured" "Saved to: $FILE" -i "$FILE"
 

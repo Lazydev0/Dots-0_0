@@ -25,6 +25,5 @@ if ! command -v "grimblast" &>/dev/null; then
 fi
 
 grimblast copysave area "${FILE}" && \
-notify-send "Area captured" "Saved to: $FILE" -i "$FILE" && \
-satty --filename "$FILE" &
+notify-send "Area captured" "Saved to: $FILE" -i "$FILE"
 
