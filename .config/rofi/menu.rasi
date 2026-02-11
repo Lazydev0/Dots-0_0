@@ -13,6 +13,7 @@ configuration {
     foreground:                  #eeeeee;
     subtext:                     #9399b2;
     selected:                    #eba0ac;
+    border:                      #31303E;        
     active:                      #b4befe;
     urgent:                      #f38ba8;
 }
@@ -28,7 +29,7 @@ window {
     x-offset:                    0px;
     y-offset:                    0px;
     border:                      2px;
-    border-color:                @active;
+    border-color:                @border;
     enabled:                     true;
     border-radius:               0px;
     cursor:                      "default";
