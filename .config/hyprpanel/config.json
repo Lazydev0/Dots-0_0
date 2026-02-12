@@ -90,7 +90,7 @@
         "clock",
         "bluetooth",
         "battery",
-        "power"
+        "custom/powermenu"
       ]
     },
     "1": {
@@ -190,13 +190,13 @@
   "theme.bar.buttons.y_margins": "0.4em",
   "theme.bar.buttons.borderSize": "0em",
   "theme.bar.enableShadow": false,
-  "theme.bar.dropdownGap": "3.4em",
+  "theme.bar.dropdownGap": "3.3em",
   "bar.workspaces.spacing": 1,
   "bar.workspaces.workspaces": 5,
   "theme.bar.menus.menu.dashboard.profile.radius": "10em",
   "menus.dashboard.recording.path": "$HOME/Videos/",
   "menus.dashboard.shortcuts.right.shortcut1.command": "sleep 0.5 && hyprpicker -a",
-  "menus.dashboard.powermenu.confirmation": true,
+  "menus.dashboard.powermenu.confirmation": false,
   "bar.customModules.updates.extendedTooltip": false,
   "bar.customModules.updates.autoHide": false,
   "bar.customModules.updates.updateTooltipCommand": "/usr/share/hyprpanel/scripts/checkUpdates.sh -arch -tooltip",

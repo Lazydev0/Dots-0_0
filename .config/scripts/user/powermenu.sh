@@ -26,6 +26,7 @@ case "$selected_option" in
   systemctl poweroff
   ;;
 "$reboot")
+  mpv --no-video --quiet ~/.config/sounds/shutdown.mp3
   systemctl reboot
   ;;
 "$sleep")

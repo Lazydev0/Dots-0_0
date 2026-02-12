@@ -1,0 +1,65 @@
+window .dashboard-menu-content .dashboard-content-items,
+window .dashboard-menu-content .dashboard-content-items .dashboard-card,
+window .dashboard-menu-content .dashboard-content-items button,
+
+window .menu-items.bluetooth,
+window .menu-items-container.bluetooth,
+window .menu-items-container.bluetooth .menu-label-container,
+window .menu-items-container.bluetooth .menu-items-section,
+window .menu-items-container.bluetooth button,
+window .menu-items-container.bluetooth .menu-switch.bluetooth,
+
+window .calendar-content-container,
+window .calendar-menu-item-container,
+window .calendar-menu-widget,
+
+window .menu-items.energy,
+window .menu-items-container.energy,
+window .menu-items-container.energy .menu-label-container,
+window .menu-items-container.energy .menu-items-section,
+window .menu-items-container.energy .menu-slider.brightness trough,
+window .menu-items-container.energy .menu-slider.brightness highlight,
+window .menu-items-container.energy .menu-slider.brightness slider,
+
+window .menu-items.network,
+window .menu-items-container.network,
+window .menu-items-container.network .menu-label-container,
+window .menu-items-container.network .menu-items-section,
+window .menu-items-container.network .network-password-input-container,
+window .menu-items-container.network .menu-switch.network,
+
+window .notification-card-container.menu,
+window .notification-card-container.menu .notification-menu-controls,
+window .notification-card-container.menu .notification-card.menu,
+window .notification-card-container.menu .menu-switch.notifications,
+window .close-notification-button.menu,
+window .notification-menu-pager,
+
+window .menu-items.media,
+window .menu-items-container.media .menu-slider.media.progress trough,
+window .menu-items-container.media .menu-slider.media.progress highlight,
+window .menu-items-container.media .menu-slider.media.progress slider,
+window .menu-items-container.media .menu-content,
+window .menu-items-container.media .media-indicator-control-button,
+
+window .menu-items.audio,
+window .menu-items-container.audio,
+window .menu-items-container.audio .menu-label-container,
+window .menu-items-container.audio .menu-items-section,
+window .menu-items-container.audio .menu-slider.playback trough,
+window .menu-items-container.audio .menu-slider.playback highlight,
+window .menu-items-container.audio .menu-slider.playback slider,
+window .menu-items-container.audio .menu-slider.input trough,
+window .menu-items-container.audio .menu-slider.input highlight,
+window .menu-items-container.audio .menu-slider.input slider
+{
+    border-radius: 0px;
+}
+
+.cmodule-powermenu {
+    padding: 1.4px;
+    border-radius: 0;
+    background-color: #fab387;
+    color: #11111b;
+}
+

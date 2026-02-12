@@ -1,1 +1,9 @@
-{}
+{
+  "custom/powermenu": {
+    "icon": " ⏻",
+    "tooltip": "Power menu",
+    "actions": {
+      "onLeftClick": "sh -c '$HOME/.config/scripts/user/powermenu.sh'"
+    }
+  }
+}

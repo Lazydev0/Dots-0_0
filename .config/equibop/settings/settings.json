@@ -1185,7 +1185,7 @@
             "enabled": false
         },
         "HeaderBarAPI": {
-            "enabled": false
+            "enabled": true
         },
         "UserAreaAPI": {
             "enabled": false
@@ -1233,6 +1233,33 @@
         },
         "DragFavoriteEmotes": {
             "enabled": false
+        },
+        "CleanerChannelGroups": {
+            "enabled": false
+        },
+        "Dragify": {
+            "enabled": false
+        },
+        "FavouriteAnything": {
+            "enabled": false
+        },
+        "FileUpload": {
+            "enabled": false
+        },
+        "MessagePeek": {
+            "enabled": false
+        },
+        "ProfileSets": {
+            "enabled": false
+        },
+        "ShowSongName": {
+            "enabled": false
+        },
+        "VoiceMessageTranscriber": {
+            "enabled": false
+        },
+        "WaitForSlot": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1250,7 +1277,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1770799963734
+        "settingsSyncVersion": 1770819626314
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
