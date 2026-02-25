@@ -41,6 +41,7 @@ rules = [
   { mime = "application/pdf", use = "pdf" },
   { mime = "audio/*", use = "audio" },
   { mime = "video/*", use = "video" },
+  { mime = "inode/directory", use = "noop" },
   { mime = "*", use = "open" }
 ]
 

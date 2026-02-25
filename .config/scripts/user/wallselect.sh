@@ -28,9 +28,9 @@ BASENAME=$(basename "$SELECTION")
 
 if [[ -n "$SELECTION" ]]; then
 
-  swww query || swww init
+  awww query || awww init
 
-  swww img "${WALL_DIR}${BASENAME}" \
+  awww img "${WALL_DIR}${BASENAME}" \
     --transition-type grow \
     --transition-bezier .4,0,.2,1 \
     --transition-duration 0.6 \

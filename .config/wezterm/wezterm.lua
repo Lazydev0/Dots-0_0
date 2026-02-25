@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 return {
 
 	font = wezterm.font({
-		family = "FiraCode Nerd Font",
+		family = "Lilex Nerd Font",
 		weight = "Medium",
 	}),
 	font_size = 11,
