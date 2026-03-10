@@ -48,3 +48,4 @@ rules = [
 [[manager.prepend_keymap]]
 on = ["d"]
 run = "shell --confirm 'mkdir -p ~/.trash && mv -- \"$@\" ~/.trash'"
+

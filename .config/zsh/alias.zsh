@@ -32,7 +32,7 @@ alias user_services='systemctl --user list-unit-files --type=service'
 alias system_services='systemctl list-unit-files --type=service'
 alias wifi_list='nmcli device wifi list'
 alias wifi_connect='nmcli device wifi connect'
-alias sync_notes="rsync -rv --delete --exclude='.git/' $HOME/Documents/Notes/ phone:/storage/emulated/0/Documents/Notes/"
+alias sync_notes="rsync -arvzP --delete --exclude='.git/' $HOME/Documents/Notes/ phone:/storage/emulated/0/Documents/Notes/"
 
 
 
