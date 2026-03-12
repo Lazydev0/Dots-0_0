@@ -1,0 +1,60 @@
+{
+  "aururl": "https://aur.archlinux.org",
+  "aurrpcurl": "https://aur.archlinux.org/rpc?",
+  "buildDir": "/var/tmp/yay",
+  "editor": "nvim",
+  "editorflags": "",
+  "makepkgbin": "makepkg",
+  "makepkgconf": "",
+  "pacmanbin": "pacman",
+  "pacmanconf": "/etc/pacman.conf",
+
+  "redownload": "no",
+  "rebuild": "no",
+
+  "answerclean": "",
+  "answerdiff": "",
+  "answeredit": "",
+  "answerupgrade": "",
+
+  "gitbin": "git",
+  "gitflags": "",
+  "gpgbin": "gpg",
+  "gpgflags": "",
+  "pgpfetch": true,
+
+  "removemake": "yes",
+  "cleanAfter": true,
+  "keepSrc": false,
+  "separatesources": false,
+
+  "cleanmenu": true,
+  "diffmenu": false,
+  "editmenu": false,
+
+  "combinedupgrade": true,
+  "batchinstall": true,
+  "useask": false,
+
+  "sortby": "votes",
+  "searchby": "name-desc",
+  "singlelineresults": false,
+  "bottomup": true,
+
+  "maxconcurrentdownloads": 3,
+  "requestsplitn": 150,
+
+  "provides": true,
+  "devel": false,
+  "timeupdate": false,
+
+  "sudobin": "doas",
+  "sudoflags": "",
+  "sudoloop": false,
+
+  "doubleconfirm": false,
+  "debug": false,
+  "rpc": true,
+  "completionrefreshtime": 7,
+  "version": "12.5.7"
+}
