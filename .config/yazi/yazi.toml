@@ -17,7 +17,7 @@ audio = [
 ]
 
 video = [
-  { run = "showtime \"$@\"" }
+  { run = "mpv \"$@\"" }
 ]
 
 trash = [
