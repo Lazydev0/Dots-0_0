@@ -35,8 +35,6 @@ open = [
 [open]
 rules = [
   { mime = "text/*", use = "nvim" },
-  { ext = "xml,json,csv,tex,py,pl,rb,js,sh,php", use = "nvim" },
-  { ext = "html,htm,xhtml", use = "nvim" },
   { mime = "image/*", use = "image" },
   { mime = "application/pdf", use = "pdf" },
   { mime = "audio/*", use = "audio" },
